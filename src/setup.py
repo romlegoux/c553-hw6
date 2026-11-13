@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os
 import sys
 import pika
@@ -23,13 +24,8 @@ def main():
 
         for q_suffix in ["tasks", "results"]:
             q_name = f"{qname}.{q_suffix}"
-            channel.queue_declare(
-                queue=q_name, 
-                durable=True, 
-                arguments={"x-queue-type": "quorum"}
-            )
+            channel.queue_declare(queue=q_name, durable=True, arguments={"x-queue-type": "quorum", "x-delivery-limit": 1000})
             print(f"RabbitMQ OK : Queue '{q_name}' declared.")
-        
         conn.close()
     except Exception as e:
         print(f"RabbitMQ FAILED: {e}")
@@ -58,6 +54,7 @@ def main():
                 id text,
                 command text,
                 state text,
+		attempts int,
                 submit_time timestamp,
                 PRIMARY KEY ((run, id))
             );
@@ -77,7 +74,7 @@ def main():
                 run text,
                 metric text,
                 count counter,
-                PRIMARY KEY (run, metric)
+                PRIMARY KEY ((run), worker, name)
             );
         """)
 
