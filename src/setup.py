@@ -48,36 +48,18 @@ def main():
         """)
         session.set_keyspace('ck')
 
-        session.execute("""
-            CREATE TABLE IF NOT EXISTS tasks (
-                run text,
-                id text,
-                command text,
-                state text,
-		attempts int,
-                submit_time timestamp,
-                PRIMARY KEY ((run, id))
-            );
-        """)
+        session.execute("""CREATE TABLE IF NOT EXISTS tasks (
+        run text, id text, cmd text, state text,
+           submitted double, attempts int,
+           PRIMARY KEY ((run, id)))""")
+
+        session.execute("""CREATE TABLE IF NOT EXISTS claims (
+        run text, id text, worker text,
+        PRIMARY KEY ((run, id)))""")
+        session.execute("""CREATE TABLE IF NOT EXISTS counters (
+        run text, worker text, name text, value counter,
+        PRIMARY KEY ((run), worker, name))""")
         
-        session.execute("""
-            CREATE TABLE IF NOT EXISTS claims (
-                run text,
-                id text,
-                worker text,
-                PRIMARY KEY ((run, id))
-            );
-        """)
-
-        session.execute("""
-            CREATE TABLE IF NOT EXISTS counters (
-                run text,
-                metric text,
-                count counter,
-                PRIMARY KEY ((run), worker, name)
-            );
-        """)
-
         print("Cassandra OK ")
         cluster.shutdown()
 
