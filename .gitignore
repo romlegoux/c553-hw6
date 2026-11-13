@@ -1,0 +1,12 @@
+# Secrets
+*.env
+ck_password
+# Python
+venv/
+__pycache__/
+*.pyc
+# Gros fichiers (Part 9)
+LibriSpeech/
+*.bin
+*.flac
+*.wav

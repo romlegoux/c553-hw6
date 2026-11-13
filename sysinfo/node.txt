@@ -1,0 +1,76 @@
+=== DATE -U ===
+Thu Nov 12 18:24:07 UTC 2026
+
+=== HOSTNAME ===
+hw6---rlegoux
+
+=== UNAME -A ===
+Linux hw6---rlegoux 6.8.0-124-generic #124-Ubuntu SMP PREEMPT_DYNAMIC Tue May 26 13:00:45 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+
+=== LSCPU ===
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  96
+On-line CPU(s) list:                     0-95
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz
+CPU family:                              6
+Model:                                   85
+Thread(s) per core:                      2
+Core(s) per socket:                      24
+Socket(s):                               2
+Stepping:                                7
+CPU(s) scaling MHz:                      28%
+CPU max MHz:                             4000.0000
+CPU min MHz:                             1000.0000
+BogoMIPS:                                4800.00
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts vnmi pku ospke avx512_vnni md_clear flush_l1d arch_capabilities ibpb_exit_to_user
+Virtualization:                          VT-x
+L1d cache:                               1.5 MiB (48 instances)
+L1i cache:                               1.5 MiB (48 instances)
+L2 cache:                                48 MiB (48 instances)
+L3 cache:                                71.5 MiB (2 instances)
+NUMA node(s):                            2
+NUMA node0 CPU(s):                       0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94
+NUMA node1 CPU(s):                       1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95
+Vulnerability Gather data sampling:      Mitigation; Microcode
+Vulnerability Indirect target selection: Mitigation; Aligned branch/return thunks
+Vulnerability Itlb multihit:             KVM: Mitigation: VMX disabled
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Mitigation; TSX disabled
+Vulnerability Vmscape:                   Mitigation; IBPB before exit to userspace
+
+=== FREE -G ===
+               total        used        free      shared  buff/cache   available
+Mem:             187           3         184           0           0         184
+Swap:              0           0           0
+
+=== LSBLK ===
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0  32.5M  1 loop /snap/snapd/28332
+loop1    7:1    0  66.8M  1 loop /snap/core24/2307
+loop2    7:2    0   118M  1 loop /snap/lxd/41296
+sda      8:0    0 447.1G  0 disk 
+├─sda1   8:1    0   550M  0 part /boot/efi
+├─sda2   8:2    0     8M  0 part 
+├─sda3   8:3    0 446.5G  0 part /
+└─sda4   8:4    0  64.8M  0 part 
+
+=== LXC --VERSION ===
+5.21.9 LTS
+
+=== INSTANCE METADATA ===
+{"uuid": "dd9e03cd-9827-4a53-bf26-37580a5cd917", "public_keys": {"hw4": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCkpu0E3hSY7a3CkRV3IzkgSnfQhGhMMdNB7c2g+gJoiWQKn2FHCCFE+jOqAseHqolF+uIMTR0vaKgxVadPeWDT3SoiDrl0GZBC/ZzQO/NPsGNpI1zI4Q0SWIXkCXuY5Nc/3YOXQ/kz9hX89fAxZUYDsGhpZ69XFJqwTaf6nblZ1pbITO4cJu97Bb0e3z1oQ5vRWkikVdy3nsc+VUC33i783cHHC+1tQnvdX3g2u3nPrbf3rmLYJwN1X6htcPR2lmPMeX0V1JqCVqIA5+TcKs2wcZfsQUSUmUb4PMtGfMxvxOwc7nZMGEyB+5O9H0ItXcPZ+gEPU2XZvmODS3HS8bxz Generated-by-Nova"}, "keys": [{"name": "hw4", "type": "ssh", "data": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCkpu0E3hSY7a3CkRV3IzkgSnfQhGhMMdNB7c2g+gJoiWQKn2FHCCFE+jOqAseHqolF+uIMTR0vaKgxVadPeWDT3SoiDrl0GZBC/ZzQO/NPsGNpI1zI4Q0SWIXkCXuY5Nc/3YOXQ/kz9hX89fAxZUYDsGhpZ69XFJqwTaf6nblZ1pbITO4cJu97Bb0e3z1oQ5vRWkikVdy3nsc+VUC33i783cHHC+1tQnvdX3g2u3nPrbf3rmLYJwN1X6htcPR2lmPMeX0V1JqCVqIA5+TcKs2wcZfsQUSUmUb4PMtGfMxvxOwc7nZMGEyB+5O9H0ItXcPZ+gEPU2XZvmODS3HS8bxz Generated-by-Nova"}], "hostname": "hw6---rlegoux.novalocal", "name": "hw6 - rlegoux", "launch_index": 0, "availability_zone": "nova", "random_seed": "IpfmpncVm0ub9p4pbCJMBmd1noh8AoJkIvIHGAnztdjTENBz+FGiAAV75LlTdy9RRrO4J0J/TMQGygYMfVBTtjDa6rFWL/+5JHY3rh9BBIVZgX+RZY+KFpLcg908Czv6UPomYCCx5TfHO7H2Bgw5ydIGyeQOe7leWOeijNIO1H65rdDv6NysPIt/YE+7N26R74i7yOzXGEO4xdqEftOz2e3iR+XrZUP7DJFHz4F/pV/044gfZSnUI/oEOny/HLJjbozWiW+/ktQ9o9TNkAl4ZWYb4bLs+Og8BWRJ1B1CEfKMzXVKpCgEY3kA8Tt4+SgYhCUsRbl6fqK9Jq5W8b/8cTqiFCqaA9Lw+trI5s4sIkwV7A8nn3fMXMY2l9/C0hde87rNG+chH2p4d4T3mNQkUIE+huBzXNzFUo0Seo1kl4r51QUp0n4oqa0i75eyiTubd4pSlTXO+qo4z1mSIsg+vX+JVDxYZm+qb6kipUaYdJIe7BN3/OIBQyc/ykPFzVslWvRa9mj2Rh7vNQMN8qXWT9l049hEWl04j2rPdsRNqmrGJhnYdFd1R/ispv0NW+t9eE/4SlPgOV/y4B+uYkQLXQWJrHnX4cBo+nUQxhjbafj23hWjHUDOfKBpus7kHrz6fBCVZCzETU9I1bvekHsPi9Za4hhHrrT+H4hPWxfVRPU=", "project_id": "7a9b326198ce4998a6601e4b793e6cc3", "devices": [], "dedicated_cpus": []}
