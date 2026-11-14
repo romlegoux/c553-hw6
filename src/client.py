@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-
 import argparse
+import logging
 import os
 import queue
 import random
@@ -12,11 +12,12 @@ import common
 
 STOP = None            # sentinel put in a queue to make a thread exit
 
-MAX_INFLIGHT = 512     # max concurrent Cassandra writes
-NUM_PUBLISHERS = 4     # publisher threads (each waits for its own confirms)
-RESULTS_PREFETCH = 1000
-DUP_SEED = 553         # fixed seed for -d
 
+MAX_INFLIGHT = 512
+NUM_PUBLISHERS = 4
+RESULTS_PREFETCH = 1000
+DUP_SEED = 553
+INSERT_TRIES = 5 
 
 # ---------------------------------------------------------------------------
 # Part 3 — local mode
@@ -48,17 +49,15 @@ def run_local(args, cmds):
 
     cid = common.client_id()
     records = {}
-
-    # Submission. Timing starts just before the first insert (= first publish).
     first_publish = time.time()
     for seq, cmd in enumerate(cmds):
         tid = common.task_id(cid, seq)
         records[tid] = common.new_record(tid, cmd, time.time())
-        tasks.put((tid, cmd))                    # insert(task)
-    for _ in threads:                            # one STOP per thread, after the tasks
+        tasks.put((tid, cmd))                    
+    for _ in threads: 
         tasks.put(STOP)
 
-    # Collection: exactly one result per task (no duplicates are possible locally).
+
     last_result = first_publish
     for _ in range(len(cmds)):
         res = results.get()
@@ -72,9 +71,8 @@ def run_local(args, cmds):
     return records, first_publish, last_result, 0, len(cmds)
 
 
-# ---------------------------------------------------------------------------
+
 # Part 2 — remote mode
-# ---------------------------------------------------------------------------
 
 def fatal(msg):
     """Abort the whole client from any thread (sys.exit only ends one thread)."""
@@ -207,16 +205,27 @@ def run_remote(args, cmds):
         inflight.release()
         ready.put(item)
 
-    def on_failed(exc, tid):
-        fatal(f"Cassandra insert of {tid} failed: {exc!r}")
+    def submit(item, tries):
+        tid, cmd = item
+        fut = session.execute_async(insert, (qname, tid, cmd, records[tid]["submitted"]))
+        fut.add_callbacks(on_written, on_failed,
+                          callback_args=(item,), errback_args=(item, tries))
+
+    def on_failed(exc, item, tries):
+        # The INSERT is idempotent (same values), so retrying it is safe. Retry
+        # later from a timer thread (never block the driver's thread); the
+        # in-flight slot stays taken until the write finally succeeds.
+        if tries >= INSERT_TRIES:
+            fatal(f"Cassandra insert of {item[0]} failed {tries} times: {exc!r}")
+        delay = 2 ** (tries - 1)                 # 1, 2, 4, 8 s
+        print(f"# insert of {item[0]} failed ({exc!r}), retry {tries} in {delay} s",
+              file=sys.stderr, flush=True)
+        threading.Timer(delay, submit, args=(item, tries + 1)).start()
 
     for tid, cmd in tasks:
         inflight.acquire()                       # wait if MAX_INFLIGHT writes pending
-        now = time.time()
-        records[tid]["submitted"] = now
-        fut = session.execute_async(insert, (qname, tid, cmd, now))
-        fut.add_callbacks(on_written, on_failed,
-                          callback_args=((tid, cmd),), errback_args=(tid,))
+        records[tid]["submitted"] = time.time()
+        submit((tid, cmd), 1)
 
     for _ in range(MAX_INFLIGHT):                # all slots back = all writes done
         inflight.acquire()
@@ -256,6 +265,10 @@ def parse_args():
 
 
 def main():
+    # The Cassandra driver hides its warnings (e.g. "host marked down") unless
+    # logging is configured: show them on stderr.
+    logging.basicConfig(level=logging.WARNING, stream=sys.stderr,
+                        format="# %(asctime)s %(name)s %(levelname)s %(message)s")
     args = parse_args()
     cmds = common.read_workload(args.workload)
     if not cmds:
