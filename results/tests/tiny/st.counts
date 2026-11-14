@@ -1,0 +1,8 @@
+# vm=tiny node=hw6---rlegoux utc=2026-11-14T16:45:12Z commit=c3ac617
+# run=st logs=small1..small1
+name           counter     logs   diff
+deliveries        1600     1600      0
+executions        1600     1600      0
+duplicates           0        0      0
+requeues             0        0      0
+reexecutions         0        -      -

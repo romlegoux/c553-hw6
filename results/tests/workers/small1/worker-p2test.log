@@ -1,0 +1,4 @@
+# vm=small1 node=hw6---rlegoux utc=2026-11-14T01:04:50Z commit=1eb870f
+# worker qname=p2test threads=8 prefetch=1
+id,start,end,status,redelivered,outcome
+# worker stopped
