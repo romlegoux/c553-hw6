@@ -18,7 +18,7 @@ def main():
         params = pika.URLParameters(url)
         conn = pika.BlockingConnection(params)
         server_props = conn._impl.server_properties
-        version = server_props.get('version', b'unknown').decode()
+        version = server_props.get('version', b'unknown')
         
         print(f"RabbitMQ OK {version}")
         conn.close()
@@ -40,7 +40,7 @@ def main():
         
         # The version is stored in the system.local table
         row = session.execute("SELECT release_version FROM system.local").one()
-        print(f"Cassandra OK {version}")
+        print(f"Cassandra OK {row}")
         cluster.shutdown()
     except Exception as e:
         print(f"Cassandra FAILED : {e}")
