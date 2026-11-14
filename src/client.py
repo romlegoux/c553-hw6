@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import argparse
 import logging
 import os
@@ -12,21 +13,19 @@ import common
 
 STOP = None            # sentinel put in a queue to make a thread exit
 
-
 MAX_INFLIGHT = 512
 NUM_PUBLISHERS = 4
 RESULTS_PREFETCH = 1000
 DUP_SEED = 553
-INSERT_TRIES = 5 
+INSERT_TRIES = 5
 
-# ---------------------------------------------------------------------------
+
 # Part 3 — local mode
-# ---------------------------------------------------------------------------
 
 def local_worker(name, tasks, results):
     """Thread body: remove a task, run it, insert the result, until STOP."""
     while True:
-        task = tasks.get()                       # task = remove()  (blocks)
+        task = tasks.get()                     
         if task is STOP:
             return
         tid, cmd = task
@@ -36,8 +35,6 @@ def local_worker(name, tasks, results):
 
 
 def run_local(args, cmds):
-    """Submit every task to the in-memory pool and collect one result per task.
-    Returns (records, first_publish, last_result, duplicates, published)."""
     tasks, results = queue.Queue(), queue.Queue()
     host = common.hostname()
     threads = [threading.Thread(target=local_worker,
@@ -49,15 +46,17 @@ def run_local(args, cmds):
 
     cid = common.client_id()
     records = {}
+
+    # Submission. Timing starts just before the first insert (= first publish).
     first_publish = time.time()
     for seq, cmd in enumerate(cmds):
         tid = common.task_id(cid, seq)
         records[tid] = common.new_record(tid, cmd, time.time())
-        tasks.put((tid, cmd))                    
-    for _ in threads: 
+        tasks.put((tid, cmd))                    # insert(task)
+    for _ in threads:                            # one STOP per thread, after the tasks
         tasks.put(STOP)
 
-
+    # Collection: exactly one result per task (no duplicates are possible locally).
     last_result = first_publish
     for _ in range(len(cmds)):
         res = results.get()
@@ -71,8 +70,9 @@ def run_local(args, cmds):
     return records, first_publish, last_result, 0, len(cmds)
 
 
-
+# 
 # Part 2 — remote mode
+
 
 def fatal(msg):
     """Abort the whole client from any thread (sys.exit only ends one thread)."""
@@ -162,8 +162,28 @@ def publisher(qname, ready, dup_ids, state, lock):
     conn.close()
 
 
-def run_remote(args, cmds):
-    """Returns (records, first_publish, last_result, duplicates, published)."""
+def read_schedule(path):
+    """Schedule file (Part 6): lines 'START DURATION RATE COMMAND', in seconds
+    after the client starts and tasks per second. Within each second the RATE
+    tasks are spread evenly. Returns [(offset_s, cmd)] sorted by offset."""
+    plan = []
+    with open(path) as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            start, duration, rate, cmd = line.split(maxsplit=3)
+            start, duration, rate = float(start), int(duration), int(rate)
+            for s in range(duration):
+                for j in range(rate):
+                    plan.append((start + s + j / rate, cmd))
+    plan.sort(key=lambda x: x[0])
+    return plan
+
+
+def run_remote(args, cmds, offsets=None):
+    """Returns (records, first_publish, last_result, duplicates, published).
+    offsets (schedule mode): submit task i at client start + offsets[i]."""
     qname = args.qname
     check_queues(qname)
 
@@ -197,8 +217,6 @@ def run_remote(args, cmds):
     for p in pubs:
         p.start()
 
-    # Cassandra callbacks run in the driver's thread: release a slot, hand the
-    # task to the publishers. Never touch pika here.
     inflight = threading.BoundedSemaphore(MAX_INFLIGHT)
 
     def on_written(_result, item):
@@ -212,9 +230,6 @@ def run_remote(args, cmds):
                           callback_args=(item,), errback_args=(item, tries))
 
     def on_failed(exc, item, tries):
-        # The INSERT is idempotent (same values), so retrying it is safe. Retry
-        # later from a timer thread (never block the driver's thread); the
-        # in-flight slot stays taken until the write finally succeeds.
         if tries >= INSERT_TRIES:
             fatal(f"Cassandra insert of {item[0]} failed {tries} times: {exc!r}")
         delay = 2 ** (tries - 1)                 # 1, 2, 4, 8 s
@@ -222,7 +237,12 @@ def run_remote(args, cmds):
               file=sys.stderr, flush=True)
         threading.Timer(delay, submit, args=(item, tries + 1)).start()
 
-    for tid, cmd in tasks:
+    t_start = time.time()
+    for i, (tid, cmd) in enumerate(tasks):
+        if offsets is not None:                  # schedule mode: wait for this task's time
+            delay = t_start + offsets[i] - time.time()
+            if delay > 0:
+                time.sleep(delay)
         inflight.acquire()                       # wait if MAX_INFLIGHT writes pending
         records[tid]["submitted"] = time.time()
         submit((tid, cmd), 1)
@@ -243,15 +263,17 @@ def run_remote(args, cmds):
     return records, state["first"], state["last"], state["dups"], state["published"]
 
 
-# ---------------------------------------------------------------------------
+
 # Main
-# ---------------------------------------------------------------------------
 
 def parse_args():
     p = argparse.ArgumentParser(description="CS553 HW6 client")
     p.add_argument("-s", dest="qname", required=True,
                    help="LOCAL for the in-process pool, otherwise the run name QNAME")
-    p.add_argument("-w", dest="workload", required=True, help="workload file (sleep MS per line)")
+    src = p.add_mutually_exclusive_group(required=True)
+    src.add_argument("-w", dest="workload", help="workload file (sleep MS per line)")
+    src.add_argument("-S", dest="schedule",
+                     help="remote only: schedule file (START DURATION RATE COMMAND)")
     p.add_argument("-t", dest="threads", type=int, default=1, help="LOCAL only: number of threads")
     p.add_argument("-d", dest="dup", type=float, default=0.0,
                    help="remote only: probability of publishing a second copy")
@@ -261,23 +283,28 @@ def parse_args():
         p.error("-t must be >= 1")
     if not 0.0 <= args.dup <= 1.0:
         p.error("-d must be between 0 and 1")
+    if args.schedule and args.qname == "LOCAL":
+        p.error("-S is for the remote mode only")
     return args
 
 
 def main():
-    # The Cassandra driver hides its warnings (e.g. "host marked down") unless
-    # logging is configured: show them on stderr.
     logging.basicConfig(level=logging.WARNING, stream=sys.stderr,
                         format="# %(asctime)s %(name)s %(levelname)s %(message)s")
     args = parse_args()
-    cmds = common.read_workload(args.workload)
+    offsets = None
+    if args.schedule:
+        plan = read_schedule(args.schedule)
+        offsets, cmds = [o for o, _ in plan], [c for _, c in plan]
+    else:
+        cmds = common.read_workload(args.workload)
     if not cmds:
         sys.exit("ERROR: empty workload")
 
     if args.qname == "LOCAL":
         records, first, last, dups, published = run_local(args, cmds)
     else:
-        records, first, last, dups, published = run_remote(args, cmds)
+        records, first, last, dups, published = run_remote(args, cmds, offsets)
 
     text = common.summary(records, first, last, dups)
     common.write_summary(text + f"\nmessages published : {published}")

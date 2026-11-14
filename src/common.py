@@ -23,11 +23,14 @@ def hostname():
     """Short hostname of this VM (tiny, small3, ...)."""
     return socket.gethostname().split(".")[0]
 
-def rabbit_connect():
+def rabbit_connect(name=None):
     """Open a blocking RabbitMQ connection from CK_AMQP_URL.
     One connection/channel per thread: pika objects are NOT thread-safe."""
     import pika
     params = pika.URLParameters(env("CK_AMQP_URL"))
+    if name:
+        params.client_properties = {"connection_name": name}
+
     return pika.BlockingConnection(params)
 
 

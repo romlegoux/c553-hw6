@@ -1,0 +1,21 @@
+[Unit]
+Description=CS553 HW6 worker
+Wants=network-online.target
+After=network-online.target lxd-agent.service
+# Worker exits 0 (idle time reached, or SIGTERM) -> power the VM off, so the
+# provisioner sees it STOPPED and deletes it.
+SuccessAction=poweroff
+
+[Service]
+User=ubuntu
+# '+' = run as root: /dev/lxd/sock is only readable by root.
+ExecStartPre=+/home/ubuntu/c553-hw6/scripts/worker-config.sh
+ExecStart=/home/ubuntu/c553-hw6/scripts/worker-launch.sh
+Restart=on-failure
+RestartSec=2
+# On 'lxc stop', systemd sends SIGTERM: the worker finishes its running tasks.
+KillSignal=SIGTERM
+TimeoutStopSec=120
+
+[Install]
+WantedBy=multi-user.target
