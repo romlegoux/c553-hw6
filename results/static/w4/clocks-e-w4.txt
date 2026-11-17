@@ -1,0 +1,79 @@
+# vm=node node=hw6---rlegoux utc=2026-11-15T22:54:49Z commit=4a88ac8
+== node
+Reference ID    : 6C205D39 (pool-108-32-93-57.pitbpa.fios.verizon.net)
+Stratum         : 3
+Ref time (UTC)  : Sun Nov 15 22:44:38 2026
+System time     : 0.000088909 seconds fast of NTP time
+Last offset     : +0.000012906 seconds
+RMS offset      : 0.000158396 seconds
+Frequency       : 33.648 ppm fast
+Residual freq   : +0.001 ppm
+Skew            : 0.010 ppm
+Root delay      : 0.014062753 seconds
+Root dispersion : 0.001297084 seconds
+Update interval : 1035.9 seconds
+Leap status     : Normal
+== tiny
+       Server: 185.125.190.57 (ntp.ubuntu.com)
+Poll interval: 34min 8s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.928ms (max: 5s)
+       Offset: -688us
+        Delay: 82.066ms
+       Jitter: 1.496ms
+ Packet count: 118
+    Frequency: -33.583ppm
+== svc
+       Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 34min 8s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.692ms (max: 5s)
+       Offset: +260us
+        Delay: 85.400ms
+       Jitter: 3.755ms
+ Packet count: 75
+    Frequency: -33.678ppm
+== ckw1
+       Server: 91.189.91.157 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 84A36001
+    Precision: 1us (-24)
+Root distance: 22.406ms (max: 5s)
+       Offset: -477.822ms
+        Delay: 23.442ms
+       Jitter: 0
+ Packet count: 1
+    Frequency: +0.000ppm
+== ckw2
+       Server: n/a (ntp.ubuntu.com)
+Poll interval: 0 (min: 32s; max 34min 8s)
+ Packet count: 0
+== ckw3
+       Server: n/a (ntp.ubuntu.com)
+Poll interval: 0 (min: 32s; max 34min 8s)
+ Packet count: 0
+== ckw4
+       Server: 91.189.91.157 (ntp.ubuntu.com)
+Poll interval: 1min 4s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 84A36001
+    Precision: 1us (-24)
+Root distance: 22.422ms (max: 5s)
+       Offset: -2.680ms
+        Delay: 23.307ms
+       Jitter: 1.013ms
+ Packet count: 2
+    Frequency: -20.942ppm

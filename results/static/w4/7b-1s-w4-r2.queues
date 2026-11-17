@@ -1,0 +1,17 @@
+# vm=svc node=hw6---rlegoux utc=2026-11-15T23:11:50Z commit=4a88ac8
+# utc name,type,ready,unacked,consumers
+23:11:50 e-w4.tasks,quorum,0,0,32 e-w4.results,quorum,0,0,0 
+23:11:57 e-w4.tasks,quorum,3008,32,32 e-w4.results,quorum,0,0,1 
+23:12:04 e-w4.tasks,quorum,2848,32,32 e-w4.results,quorum,0,0,1 
+23:12:11 e-w4.tasks,quorum,2528,32,32 e-w4.results,quorum,0,0,1 
+23:12:17 e-w4.tasks,quorum,2368,32,32 e-w4.results,quorum,0,0,1 
+23:12:24 e-w4.tasks,quorum,2208,32,32 e-w4.results,quorum,0,0,1 
+23:12:31 e-w4.tasks,quorum,1906,32,32 e-w4.results,quorum,0,0,1 
+23:12:38 e-w4.tasks,quorum,1760,32,32 e-w4.results,quorum,0,0,1 
+23:12:45 e-w4.tasks,quorum,1600,32,32 e-w4.results,quorum,0,0,1 
+23:12:51 e-w4.tasks,quorum,1280,32,32 e-w4.results,quorum,0,0,1 
+23:12:58 e-w4.tasks,quorum,1120,32,32 e-w4.results,quorum,0,0,1 
+23:13:05 e-w4.tasks,quorum,960,32,32 e-w4.results,quorum,0,0,1 
+23:13:12 e-w4.tasks,quorum,645,32,32 e-w4.results,quorum,0,0,1 
+23:13:19 e-w4.tasks,quorum,498,32,32 e-w4.results,quorum,0,0,1 
+23:13:26 e-w4.tasks,quorum,192,32,32 e-w4.results,quorum,0,0,1 

@@ -1,0 +1,10 @@
+Starting setup for run: e-p100
+
+ Setting up RabbitMQ queues
+RabbitMQ OK : Queue 'e-p100.tasks' declared.
+RabbitMQ OK : Queue 'e-p100.results' declared.
+
+ Setting up Cassandra
+Cassandra OK 
+
+Setup finished ok

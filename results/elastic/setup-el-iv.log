@@ -1,0 +1,10 @@
+Starting setup for run: el-iv
+
+ Setting up RabbitMQ queues
+RabbitMQ OK : Queue 'el-iv.tasks' declared.
+RabbitMQ OK : Queue 'el-iv.results' declared.
+
+ Setting up Cassandra
+Cassandra OK 
+
+Setup finished ok

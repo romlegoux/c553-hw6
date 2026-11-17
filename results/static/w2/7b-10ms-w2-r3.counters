@@ -1,0 +1,38 @@
+# vm=svc node=hw6---rlegoux utc=2026-11-15T22:41:35Z commit=4a88ac8
+
+ worker       | name       | value
+--------------+------------+-------
+ ckw1/1103/t0 | deliveries |  1007
+ ckw1/1103/t0 | executions |  1007
+ ckw1/1103/t1 | deliveries |  1006
+ ckw1/1103/t1 | executions |  1006
+ ckw1/1103/t2 | deliveries |  1008
+ ckw1/1103/t2 | executions |  1008
+ ckw1/1103/t3 | deliveries |  1009
+ ckw1/1103/t3 | executions |  1009
+ ckw1/1103/t4 | deliveries |  1011
+ ckw1/1103/t4 | executions |  1011
+ ckw1/1103/t5 | deliveries |  1005
+ ckw1/1103/t5 | executions |  1005
+ ckw1/1103/t6 | deliveries |  1006
+ ckw1/1103/t6 | executions |  1006
+ ckw1/1103/t7 | deliveries |  1008
+ ckw1/1103/t7 | executions |  1008
+ ckw2/1033/t0 | deliveries |   997
+ ckw2/1033/t0 | executions |   997
+ ckw2/1033/t1 | deliveries |   995
+ ckw2/1033/t1 | executions |   995
+ ckw2/1033/t2 | deliveries |   989
+ ckw2/1033/t2 | executions |   989
+ ckw2/1033/t3 | deliveries |   987
+ ckw2/1033/t3 | executions |   987
+ ckw2/1033/t4 | deliveries |   997
+ ckw2/1033/t4 | executions |   997
+ ckw2/1033/t5 | deliveries |   993
+ ckw2/1033/t5 | executions |   993
+ ckw2/1033/t6 | deliveries |   990
+ ckw2/1033/t6 | executions |   990
+ ckw2/1033/t7 | deliveries |   992
+ ckw2/1033/t7 | executions |   992
+
+(32 rows)

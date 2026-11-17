@@ -1,0 +1,1037 @@
+# 2026-11-16 00:16:33,913 cassandra.cluster WARNING Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['10.211.245.23'], lbp = None)
+# 2026-11-16 00:16:33,916 cassandra.cluster WARNING Downgrading core protocol version from 66 to 65 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+# 2026-11-16 00:16:33,918 cassandra.cluster WARNING Downgrading core protocol version from 65 to 5 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+# 2026-11-16 00:17:00,243 cassandra.cluster WARNING Host 10.211.245.23:9042 has been marked down
+# insert of tiny-38451-0070805 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070234 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070249 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070296 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070297 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070298 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070299 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070300 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070301 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070302 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070303 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070304 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070305 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070306 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070307 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070308 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070309 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070310 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070311 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070312 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070313 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070314 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070315 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070316 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070317 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070318 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070319 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070320 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070321 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070322 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070323 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070324 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070325 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070326 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070327 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070328 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070329 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070330 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070331 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070332 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070333 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070334 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070335 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070336 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070337 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070338 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070339 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070340 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070341 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070342 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070343 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070344 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070345 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070346 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070347 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070348 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070349 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070350 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070351 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070352 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070353 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070354 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070355 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070356 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070357 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070358 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070359 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070360 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070361 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070362 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070363 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070364 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070365 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070366 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070367 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070368 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070369 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070370 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070371 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070372 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070373 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070374 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070375 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070376 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070377 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070378 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070379 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070380 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070381 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070382 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070383 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070384 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070385 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070386 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070387 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070388 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070389 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070390 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070391 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070392 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070393 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070394 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070395 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070396 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070397 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070398 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070399 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070400 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070401 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070402 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070403 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070404 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070405 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070406 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070407 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070408 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070409 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070410 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070411 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070412 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070413 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070414 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070415 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070416 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070417 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070418 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070419 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070420 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070421 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070422 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070423 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070424 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070425 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070426 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070427 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070428 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070429 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070430 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070431 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070432 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070433 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070434 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070435 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070436 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070437 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070438 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070439 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070440 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070441 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070442 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070443 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070444 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070445 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070446 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070447 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070448 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070449 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070450 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070451 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070452 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070453 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070454 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070455 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070456 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070457 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070458 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070459 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070460 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070461 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070462 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070463 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070464 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070465 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070466 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070467 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070468 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070469 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070470 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070471 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070472 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070473 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070474 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070475 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070476 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070477 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070478 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070479 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070480 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070481 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070482 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070483 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070484 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070485 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070486 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070487 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070488 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070489 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070490 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070491 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070492 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070493 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070494 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070495 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070496 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070497 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070498 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070499 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070500 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070501 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070502 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070503 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070504 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070505 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070506 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070507 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070508 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070509 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070510 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070511 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070512 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070513 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070514 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070515 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070516 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070517 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070518 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070519 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070520 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070521 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070522 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070523 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070524 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070525 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070526 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070527 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070528 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070529 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070530 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070531 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070532 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070533 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070534 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070535 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070536 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070537 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070538 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070539 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070540 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070541 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070542 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070543 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070544 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070545 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070546 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070547 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070548 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070549 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070550 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070551 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070552 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070553 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070554 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070555 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070556 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070557 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070558 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070559 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070560 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070561 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070562 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070563 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070564 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070565 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070566 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070567 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070568 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070569 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070570 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070571 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070572 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070573 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070574 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070575 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070576 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070577 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070578 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070579 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070580 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070581 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070582 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070583 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070584 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070585 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070586 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070587 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070588 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070589 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070590 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070591 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070592 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070593 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070594 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070595 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070596 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070597 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070598 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070599 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070600 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070601 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070602 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070603 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070604 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070605 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070606 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070607 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070608 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070609 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070610 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070611 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070612 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070613 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070614 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070615 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070616 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070617 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070618 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070619 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070620 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070621 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070622 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070623 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070624 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070625 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070626 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070627 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070628 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070629 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070630 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070631 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070632 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070633 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070634 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070635 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070636 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070637 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070638 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070639 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070640 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070641 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070642 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070643 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070644 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070645 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070646 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070647 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070648 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070649 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070650 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070651 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070652 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070653 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070654 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070655 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070656 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070657 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070658 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070659 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070660 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070661 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070662 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070663 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070664 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070665 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070666 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070667 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070668 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070669 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070670 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070671 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070672 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070673 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070674 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070675 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070676 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070677 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070678 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070679 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070680 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070681 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070682 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070683 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070684 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070685 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070686 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070687 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070688 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070689 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070690 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070691 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070692 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070693 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070694 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070695 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070696 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070697 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070698 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070699 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070700 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070701 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070702 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070703 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070704 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070705 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070706 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070707 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070708 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070709 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070710 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070711 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070712 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070713 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070714 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070715 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070716 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070717 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070718 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070719 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070720 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070721 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070722 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070723 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070724 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070725 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070726 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070727 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070728 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070729 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070730 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070731 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070732 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070733 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070734 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070735 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070736 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070737 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070738 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070739 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070740 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070741 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070742 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070743 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070744 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070745 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070746 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070747 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070748 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070749 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070750 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070751 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070752 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070753 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070754 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070755 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070756 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070757 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070758 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070759 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070760 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070761 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070762 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070763 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070764 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070765 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070766 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070767 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070768 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070769 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070770 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070771 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070772 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070773 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070774 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070775 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070776 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070777 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070778 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070779 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070780 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070781 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070782 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070783 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070784 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070785 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070786 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070787 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070788 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070789 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070790 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070791 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070792 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070793 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070794 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070795 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070796 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070797 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070798 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070799 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070800 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070801 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070802 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070803 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070804 failed (NoHostAvailable('Unable to complete the operation against any hosts', {<Host: 10.211.245.23:9042 datacenter1>: ConnectionShutdown('CRC mismatch on header f707cf. Received 85", computed 568f26.')})), retry 1 in 1 s
+# insert of tiny-38451-0070805 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070249 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070296 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070234 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070297 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070298 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070299 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070302 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070301 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070304 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070300 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070303 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070306 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070308 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070317 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070307 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070320 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070309 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070311 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070316 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070323 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070328 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070329 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070335 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070373 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070340 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070387 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070367 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070364 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070349 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070375 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070370 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070354 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070388 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070385 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070336 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070351 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070347 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070358 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070397 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070393 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070405 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070407 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070411 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070396 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070404 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070428 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070398 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070392 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070423 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070657 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070426 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070427 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070313 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070420 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070432 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070378 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070436 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070429 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070305 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070421 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070433 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070415 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070346 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070446 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070310 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070449 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070451 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070450 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070326 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070454 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070456 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070457 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070331 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070334 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070330 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070332 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070462 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070342 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070469 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070383 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070472 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070362 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070476 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070312 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070477 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070480 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070478 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070363 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070390 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070380 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070486 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070333 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070490 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070494 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070492 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070499 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070485 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070352 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070496 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070504 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070511 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070403 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070514 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070384 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070519 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070524 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070525 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070522 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070339 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070532 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070359 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070406 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070516 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070535 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070537 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070412 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070538 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070545 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070544 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070549 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070553 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070547 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070564 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070417 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070565 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070566 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070569 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070568 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070570 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070356 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070574 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070576 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070588 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070590 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070418 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070587 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070592 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070591 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070594 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070600 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070601 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070606 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070607 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070603 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070614 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070610 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070608 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070624 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070374 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070626 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070623 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070629 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070651 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070409 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070637 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070640 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070617 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070648 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070656 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070661 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070666 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070680 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070673 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070684 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070414 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070668 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070699 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070687 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070672 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070689 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070693 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070662 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070703 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070710 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070683 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070664 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070737 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070708 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070725 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070715 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070701 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070736 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070722 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070714 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070730 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070743 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070718 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070746 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070691 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070728 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070695 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070766 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070756 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070726 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070754 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070765 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070767 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070713 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070761 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070777 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070778 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070780 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070772 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070700 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070789 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070791 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070792 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070795 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070764 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070799 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070802 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070676 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070763 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070790 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070315 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070337 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070377 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070435 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070321 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070360 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070353 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070445 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070408 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070448 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070443 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070453 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070452 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070327 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070459 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070341 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070343 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070465 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070338 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070467 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070366 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070475 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070395 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070379 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070479 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070483 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070484 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070491 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070489 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070493 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070376 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070506 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070401 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070507 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070497 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070509 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070391 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070518 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070520 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070515 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070527 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070529 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070531 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070536 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070368 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070543 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070369 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070558 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070546 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070555 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070563 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070557 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070550 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070577 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070573 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070579 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070582 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070580 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070589 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070571 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070593 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070595 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070597 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070584 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070602 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070620 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070611 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070618 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070628 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070631 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070643 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070633 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070635 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070639 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070650 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070660 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070663 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070642 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070671 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070677 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070655 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070638 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070682 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070679 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070707 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070711 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070733 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070644 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070694 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070721 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070738 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070692 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070742 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070745 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070741 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070681 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070438 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070729 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070696 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070769 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070775 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070771 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070755 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070782 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070786 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070757 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070793 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070773 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070731 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070801 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070796 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070788 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070419 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070400 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070437 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070381 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070444 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070314 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070324 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070431 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070455 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070460 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070319 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070463 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070466 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070468 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070474 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070470 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070394 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070481 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070495 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070502 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070501 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070505 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070508 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070521 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070528 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070399 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070534 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070533 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070540 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070539 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070402 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070562 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070548 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070560 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070567 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070556 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070575 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070430 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070586 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070604 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070605 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070612 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070615 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070422 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070630 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070632 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070636 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070625 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070652 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070667 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070619 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070424 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070678 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070674 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070727 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070653 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070720 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070697 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070705 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070675 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070416 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070749 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070762 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070748 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070760 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070774 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070779 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070783 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070659 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070794 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070781 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070719 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070804 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070797 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070798 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070434 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070440 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070372 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070344 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070447 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070458 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070461 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070350 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070471 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070389 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070365 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070498 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070512 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070510 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070386 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070530 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070361 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070410 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070552 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070559 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070578 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070583 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070596 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070609 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070621 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070627 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070654 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070641 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070670 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070685 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070669 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070690 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070649 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070723 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070712 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070751 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070716 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070753 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070747 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070732 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070776 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070784 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070785 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070717 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070382 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070442 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070439 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070318 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070357 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070473 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070487 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070513 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070517 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070526 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070542 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070554 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070581 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070585 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070598 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070599 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070622 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070647 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070425 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070665 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070704 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070702 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070734 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070735 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070706 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070758 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070759 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070658 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070750 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070800 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070803 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070770 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070355 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070464 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070500 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070413 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070561 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070345 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070634 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070688 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070698 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070744 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070739 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070768 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070441 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070325 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070348 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070503 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070551 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070572 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070646 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070645 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070752 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070787 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070482 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070523 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070613 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070740 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070322 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070371 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070616 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070686 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070488 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070724 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070709 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+# insert of tiny-38451-0070541 failed (NoHostAvailable('Unable to complete the operation against any hosts', {})), retry 2 in 2 s
+all 100000 tasks submitted (100000 messages), waiting for results...
+# vm=tiny node=hw6---rlegoux utc=2026-11-16T00:19:27Z commit=4a88ac8
+tasks              : 100000
+successes          : 100000
+failures           : 0
+duplicates ignored : 0
+time (s)           : 173.299
+throughput (t/s)   : 577.0
+messages published : 100000

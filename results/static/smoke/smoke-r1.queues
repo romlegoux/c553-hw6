@@ -1,0 +1,14 @@
+# vm=svc node=hw6---rlegoux utc=2026-11-15T21:47:14Z commit=4a88ac8
+# utc name,type,ready,unacked,consumers
+21:47:14 e-smoke.results,quorum,0,0,0 e-smoke.tasks,quorum,0,0,8 
+21:47:21 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,3681,8,8 
+21:47:27 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,7960,8,8 
+21:47:33 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,7708,8,8 
+21:47:40 e-smoke.results,quorum,0,1,1 e-smoke.tasks,quorum,6984,8,8 
+21:47:46 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,5581,8,8 
+21:47:52 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,4921,8,8 
+21:47:59 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,4248,8,8 
+21:48:05 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,3540,8,8 
+21:48:11 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,2221,8,8 
+21:48:17 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,1576,8,8 
+21:48:24 e-smoke.results,quorum,0,1,1 e-smoke.tasks,quorum,877,8,8 

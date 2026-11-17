@@ -1,0 +1,10 @@
+Starting setup for run: e-smoke
+
+ Setting up RabbitMQ queues
+RabbitMQ OK : Queue 'e-smoke.tasks' declared.
+RabbitMQ OK : Queue 'e-smoke.results' declared.
+
+ Setting up Cassandra
+Cassandra OK 
+
+Setup finished ok

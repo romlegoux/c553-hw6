@@ -1,0 +1,8 @@
+# vm=svc node=hw6---rlegoux utc=2026-11-15T23:58:55Z commit=4a88ac8
+# utc name,type,ready,unacked,consumers
+23:58:55 e-w8.tasks,quorum,0,0,64 e-w8.results,quorum,0,0,0 
+23:59:02 e-w8.tasks,quorum,1408,64,64 e-w8.results,quorum,0,0,1 
+23:59:08 e-w8.tasks,quorum,855,56,56 e-w8.results,quorum,0,0,1 
+23:59:15 e-w8.tasks,quorum,590,64,64 e-w8.results,quorum,0,0,1 
+23:59:21 e-w8.tasks,quorum,320,64,64 e-w8.results,quorum,0,0,1 
+23:59:28 e-w8.tasks,quorum,0,8,64 e-w8.results,quorum,0,0,1 

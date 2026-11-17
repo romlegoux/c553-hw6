@@ -1,0 +1,10 @@
+Starting setup for run: e-w1
+
+ Setting up RabbitMQ queues
+RabbitMQ OK : Queue 'e-w1.tasks' declared.
+RabbitMQ OK : Queue 'e-w1.results' declared.
+
+ Setting up Cassandra
+Cassandra OK 
+
+Setup finished ok

@@ -1,0 +1,22 @@
+# vm=svc node=hw6---rlegoux utc=2026-11-15T22:04:45Z commit=4a88ac8
+
+ worker       | name       | value
+--------------+------------+-------
+ ckw1/1097/t0 | deliveries |  1001
+ ckw1/1097/t0 | executions |  1001
+ ckw1/1097/t1 | deliveries |  1005
+ ckw1/1097/t1 | executions |  1005
+ ckw1/1097/t2 | deliveries |   997
+ ckw1/1097/t2 | executions |   997
+ ckw1/1097/t3 | deliveries |  1000
+ ckw1/1097/t3 | executions |  1000
+ ckw1/1097/t4 | deliveries |  1000
+ ckw1/1097/t4 | executions |  1000
+ ckw1/1097/t5 | deliveries |  1000
+ ckw1/1097/t5 | executions |  1000
+ ckw1/1097/t6 | deliveries |   996
+ ckw1/1097/t6 | executions |   996
+ ckw1/1097/t7 | deliveries |  1001
+ ckw1/1097/t7 | executions |  1001
+
+(16 rows)

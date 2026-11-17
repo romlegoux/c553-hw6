@@ -1,0 +1,10 @@
+Starting setup for run: el-iii
+
+ Setting up RabbitMQ queues
+RabbitMQ OK : Queue 'el-iii.tasks' declared.
+RabbitMQ OK : Queue 'el-iii.results' declared.
+
+ Setting up Cassandra
+Cassandra OK 
+
+Setup finished ok

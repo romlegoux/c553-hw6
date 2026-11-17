@@ -1,0 +1,17 @@
+# vm=svc node=hw6---rlegoux utc=2026-11-15T23:47:10Z commit=4a88ac8
+# utc name,type,ready,unacked,consumers
+23:47:10 e-w8.tasks,quorum,0,0,64 e-w8.results,quorum,0,0,0 
+23:47:16 e-w8.tasks,quorum,576,64,64 e-w8.results,quorum,0,0,1 
+23:47:23 e-w8.tasks,quorum,512,64,64 e-w8.results,quorum,0,0,1 
+23:47:30 e-w8.tasks,quorum,512,64,64 e-w8.results,quorum,0,0,1 
+23:47:36 e-w8.tasks,quorum,448,64,64 e-w8.results,quorum,0,0,1 
+23:47:43 e-w8.tasks,quorum,384,64,64 e-w8.results,quorum,0,0,1 
+23:47:50 e-w8.tasks,quorum,384,64,64 e-w8.results,quorum,0,0,1 
+23:47:57 e-w8.tasks,quorum,320,64,64 e-w8.results,quorum,0,0,1 
+23:48:03 e-w8.tasks,quorum,256,64,64 e-w8.results,quorum,0,0,1 
+23:48:11 e-w8.tasks,quorum,256,64,64 e-w8.results,quorum,0,0,1 
+23:48:17 e-w8.tasks,quorum,192,64,64 e-w8.results,quorum,0,0,1 
+23:48:24 e-w8.tasks,quorum,128,64,64 e-w8.results,quorum,0,0,1 
+23:48:31 e-w8.tasks,quorum,128,64,64 e-w8.results,quorum,0,0,1 
+23:48:38 e-w8.tasks,quorum,64,64,64 e-w8.results,quorum,0,0,1 
+23:48:45 e-w8.tasks,quorum,0,64,64 e-w8.results,quorum,0,0,1 

@@ -1,0 +1,135 @@
+# vm=node node=hw6---rlegoux utc=2026-11-15T23:24:48Z commit=4a88ac8
+== node
+Reference ID    : 6C205D39 (pool-108-32-93-57.pitbpa.fios.verizon.net)
+Stratum         : 3
+Ref time (UTC)  : Sun Nov 15 23:19:19 2026
+System time     : 0.000193361 seconds fast of NTP time
+Last offset     : +0.000118869 seconds
+RMS offset      : 0.000154898 seconds
+Frequency       : 33.653 ppm fast
+Residual freq   : +0.001 ppm
+Skew            : 0.011 ppm
+Root delay      : 0.014062753 seconds
+Root dispersion : 0.001055822 seconds
+Update interval : 2080.6 seconds
+Leap status     : Normal
+== tiny
+       Server: 185.125.190.57 (ntp.ubuntu.com)
+Poll interval: 34min 8s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.852ms (max: 5s)
+       Offset: -1.693ms
+        Delay: 85.280ms
+       Jitter: 1.448ms
+ Packet count: 119
+    Frequency: -33.996ppm
+== svc
+       Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 34min 8s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.760ms (max: 5s)
+       Offset: -36us
+        Delay: 85.373ms
+       Jitter: 3.648ms
+ Packet count: 76
+    Frequency: -33.687ppm
+== ckw1
+       Server: 185.125.190.57 (ntp.ubuntu.com)
+Poll interval: 2min 8s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.593ms (max: 5s)
+       Offset: -8.766ms
+        Delay: 85.163ms
+       Jitter: 11.440ms
+ Packet count: 3
+    Frequency: +63.934ppm
+== ckw2
+       Server: 91.189.91.157 (ntp.ubuntu.com)
+Poll interval: 2min 8s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 84A36001
+    Precision: 1us (-24)
+Root distance: 22.132ms (max: 5s)
+       Offset: -2.755ms
+        Delay: 18.568ms
+       Jitter: 2.628ms
+ Packet count: 3
+    Frequency: -10.763ppm
+== ckw3
+       Server: 91.189.91.157 (ntp.ubuntu.com)
+Poll interval: 2min 8s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 84A36001
+    Precision: 1us (-24)
+Root distance: 22.132ms (max: 5s)
+       Offset: -4.445ms
+        Delay: 23.407ms
+       Jitter: 2.377ms
+ Packet count: 3
+    Frequency: -17.365ppm
+== ckw4
+       Server: 185.125.190.56 (ntp.ubuntu.com)
+Poll interval: 1min 4s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.424ms (max: 5s)
+       Offset: -1.076ms
+        Delay: 85.137ms
+       Jitter: 406us
+ Packet count: 2
+    Frequency: +0.000ppm
+== ckw5
+       Server: n/a (ntp.ubuntu.com)
+Poll interval: 0 (min: 32s; max 34min 8s)
+ Packet count: 0
+== ckw6
+       Server: n/a (ntp.ubuntu.com)
+Poll interval: 0 (min: 32s; max 34min 8s)
+ Packet count: 0
+== ckw7
+       Server: 185.125.190.57 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.608ms (max: 5s)
+       Offset: -322.916ms
+        Delay: 82.007ms
+       Jitter: 0
+ Packet count: 1
+    Frequency: +0.000ppm
+== ckw8
+       Server: 185.125.190.56 (ntp.ubuntu.com)
+Poll interval: 1min 4s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.440ms (max: 5s)
+       Offset: -1.120ms
+        Delay: 85.079ms
+       Jitter: 423us
+ Packet count: 2
+    Frequency: +0.000ppm

@@ -1,0 +1,13 @@
+# vm=svc node=hw6---rlegoux utc=2026-11-15T23:08:40Z commit=4a88ac8
+# utc name,type,ready,unacked,consumers
+23:08:40 e-w4.tasks,quorum,0,0,32 e-w4.results,quorum,0,0,0 
+23:08:47 e-w4.tasks,quorum,34,32,32 e-w4.results,quorum,0,24,1 
+23:08:53 e-w4.tasks,quorum,0,12,32 e-w4.results,quorum,0,12,1 
+23:09:00 e-w4.tasks,quorum,642,32,32 e-w4.results,quorum,0,1,1 
+23:09:06 e-w4.tasks,quorum,3519,32,32 e-w4.results,quorum,0,2,1 
+23:09:13 e-w4.tasks,quorum,5081,32,32 e-w4.results,quorum,0,0,1 
+23:09:19 e-w4.tasks,quorum,6396,32,32 e-w4.results,quorum,0,1,1 
+23:09:25 e-w4.tasks,quorum,7888,32,32 e-w4.results,quorum,0,3,1 
+23:09:32 e-w4.tasks,quorum,8647,32,32 e-w4.results,quorum,0,2,1 
+23:09:38 e-w4.tasks,quorum,6137,32,32 e-w4.results,quorum,0,0,1 
+23:09:44 e-w4.tasks,quorum,3590,32,32 e-w4.results,quorum,0,0,1 
