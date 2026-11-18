@@ -1,0 +1,17 @@
+# vm=svc node=hw6---rlegoux utc=2026-11-18T21:53:32Z commit=35e3e94
+# utc name,type,ready,unacked,consumers
+21:53:32 q6-fast.results,classic,0,22,1 q6-fast.tasks,classic,281,64,64 
+21:53:38 q6-fast.results,classic,0,10,1 q6-fast.tasks,classic,8990,64,64 
+21:53:45 q6-fast.results,classic,0,54,1 q6-fast.tasks,classic,19084,64,64 
+21:53:52 q6-fast.results,classic,0,70,1 q6-fast.tasks,classic,28063,64,64 
+21:53:59 q6-fast.results,classic,0,1,1 q6-fast.tasks,classic,35917,64,64 
+21:54:06 q6-fast.results,classic,0,29,1 q6-fast.tasks,classic,45524,64,64 
+21:54:12 q6-fast.results,classic,0,2,1 q6-fast.tasks,classic,55959,64,64 
+21:54:19 q6-fast.results,classic,0,0,1 q6-fast.tasks,classic,49212,64,64 
+21:54:25 q6-fast.results,classic,0,0,1 q6-fast.tasks,classic,42398,64,64 
+21:54:32 q6-fast.results,classic,0,1,1 q6-fast.tasks,classic,35642,64,64 
+21:54:38 q6-fast.results,classic,0,1,1 q6-fast.tasks,classic,28871,64,64 
+21:54:45 q6-fast.results,classic,0,0,1 q6-fast.tasks,classic,21975,64,64 
+21:54:51 q6-fast.results,classic,0,8,1 q6-fast.tasks,classic,15212,64,64 
+21:54:58 q6-fast.results,classic,0,0,1 q6-fast.tasks,classic,8259,64,64 
+21:55:04 q6-fast.results,classic,0,0,1 q6-fast.tasks,classic,1452,64,64 

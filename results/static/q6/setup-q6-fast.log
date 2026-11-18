@@ -1,0 +1,10 @@
+Starting setup for run: q6-fast
+
+ Setting up RabbitMQ queues
+RabbitMQ OK : Queue 'q6-fast.tasks' declared.
+RabbitMQ OK : Queue 'q6-fast.results' declared.
+
+ Setting up Cassandra
+Cassandra OK 
+
+Setup finished ok

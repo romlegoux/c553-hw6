@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+"""CS553 HW6 client, run on tiny.
+
+  client -s LOCAL -t N -w WORKLOAD [-o CSV]
+  client -s QNAME (-w WORKLOAD | -S SCHEDULE) [-d P] [-o CSV]
+"""
 
 import argparse
 import logging
@@ -10,22 +15,21 @@ import threading
 import time
 
 import common
+import mgmt
 
-STOP = None            # sentinel put in a queue to make a thread exit
+STOP = None
 
-MAX_INFLIGHT = 512
+MAX_INFLIGHT = 512     # max concurrent Cassandra writes
 NUM_PUBLISHERS = 4
 RESULTS_PREFETCH = 1000
-DUP_SEED = 553
+DUP_SEED = 553         # fixed seed for -d
 INSERT_TRIES = 5
 
-
-# Part 3 — local mode
 
 def local_worker(name, tasks, results):
     """Thread body: remove a task, run it, insert the result, until STOP."""
     while True:
-        task = tasks.get()                     
+        task = tasks.get()                       # task = remove()  (blocks)
         if task is STOP:
             return
         tid, cmd = task
@@ -35,6 +39,7 @@ def local_worker(name, tasks, results):
 
 
 def run_local(args, cmds):
+    """Submit every task to the in-memory pool and collect one result per task."""
     tasks, results = queue.Queue(), queue.Queue()
     host = common.hostname()
     threads = [threading.Thread(target=local_worker,
@@ -47,7 +52,6 @@ def run_local(args, cmds):
     cid = common.client_id()
     records = {}
 
-    # Submission. Timing starts just before the first insert (= first publish).
     first_publish = time.time()
     for seq, cmd in enumerate(cmds):
         tid = common.task_id(cid, seq)
@@ -56,7 +60,6 @@ def run_local(args, cmds):
     for _ in threads:                            # one STOP per thread, after the tasks
         tasks.put(STOP)
 
-    # Collection: exactly one result per task (no duplicates are possible locally).
     last_result = first_publish
     for _ in range(len(cmds)):
         res = results.get()
@@ -70,10 +73,6 @@ def run_local(args, cmds):
     return records, first_publish, last_result, 0, len(cmds)
 
 
-# 
-# Part 2 — remote mode
-
-
 def fatal(msg):
     """Abort the whole client from any thread (sys.exit only ends one thread)."""
     print(f"ERROR: {msg}", file=sys.stderr, flush=True)
@@ -81,7 +80,7 @@ def fatal(msg):
 
 
 def check_queues(qname):
-    """Passive declare: never creates a queue. Exit non-zero if one is missing."""
+    """Passive declare: never creates a queue."""
     import pika
     conn = common.rabbit_connect()
     for suffix in ("tasks", "results"):
@@ -96,9 +95,7 @@ def check_queues(qname):
 
 
 def collector(qname, records, state, started):
-    """Consume QNAME.results until every task has one result.
-    Only this thread writes the result fields of the records and the counters
-    below, so no lock is needed."""
+    """Consume QNAME.results until every task has one result."""
     conn = common.rabbit_connect()
     ch = conn.channel()
     ch.basic_qos(prefetch_count=RESULTS_PREFETCH)
@@ -111,7 +108,7 @@ def collector(qname, records, state, started):
         if rec is None:
             state["stray"] += 1                  # not one of our tasks
         elif rec["arrival"] is not None:
-            state["dups"] += 1                   # second result for the same task: ignored
+            state["dups"] += 1
         else:
             rec.update(start=res["start"], end=res["end"], arrival=now,
                        worker=res["worker"], attempts=res["attempts"],
@@ -128,15 +125,14 @@ def collector(qname, records, state, started):
     conn.close()
 
 
-def publisher(qname, ready, dup_ids, state, lock):
-    """Publish each ready task (persistent, confirmed). basic_publish on a
-    confirm channel blocks until the broker confirms, so a task counts as
-    submitted only once confirmed."""
+def publisher(qname, ready, dup_ids, state, lock, durable):
+    """Publish each ready task."""
     import pika
     conn = common.rabbit_connect()
     ch = conn.channel()
-    ch.confirm_delivery()
-    props = pika.BasicProperties(delivery_mode=2,            # persistent
+    if durable:
+        ch.confirm_delivery()
+    props = pika.BasicProperties(delivery_mode=2 if durable else 1,   # 2 = persistent
                                  content_type="application/json")
     while True:
         try:
@@ -154,7 +150,7 @@ def publisher(qname, ready, dup_ids, state, lock):
                     state["first"] = time.time()      # timing starts here
             try:
                 ch.basic_publish(exchange="", routing_key=f"{qname}.tasks",
-                                 body=body, properties=props, mandatory=True)
+                                 body=body, properties=props, mandatory=durable)
             except Exception as e:                    # nack or unroutable
                 fatal(f"publish of {tid} failed: {e!r}")
             with lock:
@@ -163,9 +159,7 @@ def publisher(qname, ready, dup_ids, state, lock):
 
 
 def read_schedule(path):
-    """Schedule file (Part 6): lines 'START DURATION RATE COMMAND', in seconds
-    after the client starts and tasks per second. Within each second the RATE
-    tasks are spread evenly. Returns [(offset_s, cmd)] sorted by offset."""
+    """Schedule file (Part 6): lines 'START DURATION RATE COMMAND', in seconds after the client starts and tasks per second."""
     plan = []
     with open(path) as f:
         for line in f:
@@ -182,18 +176,18 @@ def read_schedule(path):
 
 
 def run_remote(args, cmds, offsets=None):
-    """Returns (records, first_publish, last_result, duplicates, published).
-    offsets (schedule mode): submit task i at client start + offsets[i]."""
+    """Returns (records, first_publish, last_result, duplicates, published)."""
     qname = args.qname
     check_queues(qname)
+    durable = mgmt.durable_mode(qname)
+    print(f"# mode: {'durable (quorum, persistent, confirms)' if durable else 'fast (classic, transient, no confirms)'}",
+          flush=True)
 
     cluster, session = common.cassandra_connect()
     insert = session.prepare(
         "INSERT INTO tasks (run, id, cmd, state, submitted, attempts) "
         "VALUES (?, ?, ?, 'QUEUED', ?, 0)")
 
-    # All IDs and records exist before any thread starts: the dict never changes
-    # shape afterwards, threads only update fields of existing records.
     cid = common.client_id()
     tasks = [(common.task_id(cid, seq), cmd) for seq, cmd in enumerate(cmds)]
     records = {tid: common.new_record(tid, cmd, None) for tid, cmd in tasks}
@@ -211,7 +205,7 @@ def run_remote(args, cmds, offsets=None):
     started.wait()
 
     ready = queue.Queue()
-    pubs = [threading.Thread(target=publisher, args=(qname, ready, dup_ids, state, lock),
+    pubs = [threading.Thread(target=publisher, args=(qname, ready, dup_ids, state, lock, durable),
                              daemon=True)
             for _ in range(NUM_PUBLISHERS)]
     for p in pubs:
@@ -239,7 +233,7 @@ def run_remote(args, cmds, offsets=None):
 
     t_start = time.time()
     for i, (tid, cmd) in enumerate(tasks):
-        if offsets is not None:                  # schedule mode: wait for this task's time
+        if offsets is not None:
             delay = t_start + offsets[i] - time.time()
             if delay > 0:
                 time.sleep(delay)
@@ -262,9 +256,6 @@ def run_remote(args, cmds, offsets=None):
         print(f"note: {state['stray']} results from other runs/clients ignored")
     return records, state["first"], state["last"], state["dups"], state["published"]
 
-
-
-# Main
 
 def parse_args():
     p = argparse.ArgumentParser(description="CS553 HW6 client")

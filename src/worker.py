@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""CS553 HW6 worker, one per worker VM.
+
+  worker -s QNAME -t N [-p PREFETCH] [-i IDLE]
+
+Per task: claim (LWT, 30 s lease) -> run -> publish result -> DONE (LWT) -> ack.
+"""
 
 import argparse
 import logging
@@ -9,12 +15,14 @@ import threading
 import time
 
 import common
+import mgmt
 
-CLAIM_TTL = 30
+CLAIM_TTL = 30        # lease length (s)
 RENEW_EVERY = 10
 REQUEUE_DELAY = 2.0
 
-stop = threading.Event()   # set by SIGTERM/SIGINT, or when idle too long (-i)
+stop = threading.Event()
+
 activity_lock = threading.Lock()
 last_activity = time.time()
 busy = 0
@@ -26,9 +34,6 @@ def activity(delta):
         busy += delta
         last_activity = time.time()
 
-
-
-# Cassandra statements
 
 def prepare(session):
     p = session.prepare
@@ -49,18 +54,13 @@ def prepare(session):
 
 
 def count(session, st, run, me, name):
-    """Fire-and-forget counter increment: never retried (a retried counter
-    update after a timeout could count twice). Errors are only logged."""
+    """Fire-and-forget counter increment: never retried (a retried counter update after a timeout could count twice)."""
     fut = session.execute_async(st["count"], (run, me, name))
     fut.add_errback(lambda e: print(f"# counter {name} failed: {e!r}", flush=True))
 
 
-
-# Lease renewal during execution
-
 def renewer(session, st, run, tid, me, finished, lost):
-    """Extend the claim every RENEW_EVERY s until `finished` is set.
-    If a renewal is not applied, someone else owns the task now: set `lost`."""
+    """Extend the claim every RENEW_EVERY s until `finished` is set."""
     while not finished.wait(RENEW_EVERY):
         rs = session.execute(st["renew"], (me, run, tid, me))
         if not rs.was_applied:
@@ -68,18 +68,17 @@ def renewer(session, st, run, tid, me, finished, lost):
             return
 
 
-
-# One worker thread
-
-def worker_thread(idx, qname, prefetch, session, st):
+def worker_thread(idx, qname, prefetch, session, st, durable):
     import pika
-    me = f"{common.hostname()}/{os.getpid()}/t{idx}"
+    me = f"{common.hostname()}/{os.getpid()}/t{idx}"     # unique per thread AND process
     conn = common.rabbit_connect(name=common.hostname())
-    ch = conn.channel()                          
+    ch = conn.channel()                                  # consuming channel
     ch.basic_qos(prefetch_count=prefetch)
-    pub = conn.channel()
-    pub.confirm_delivery()
-    props = pika.BasicProperties(delivery_mode=2, content_type="application/json")
+    pub = conn.channel()                                 # publishing channel
+    if durable:                                          # Q6 fast mode: no confirms,
+        pub.confirm_delivery()                           # transient results
+    props = pika.BasicProperties(delivery_mode=2 if durable else 1,
+                                 content_type="application/json")
 
     def log(tid, start, end, status, redelivered, outcome):
         s = f"{start:.6f}" if start else ""
@@ -98,7 +97,7 @@ def worker_thread(idx, qname, prefetch, session, st):
 
         count(session, st, run, me, "deliveries")
 
-        # 1. Claim (LWT). On failure the response tells who holds it.
+        # 1. claim (LWT)
         rs = session.execute(st["claim"], (run, tid, me))
         if not rs.was_applied:
             holder = rs.one().worker
@@ -107,14 +106,13 @@ def worker_thread(idx, qname, prefetch, session, st):
                 ch.basic_ack(delivery_tag=method.delivery_tag)
                 log(tid, None, None, None, redelivered, "dup")
             else:
-                # Holder may be dead with its lease still running: never drop it.
                 count(session, st, run, me, "requeues")
                 time.sleep(REQUEUE_DELAY)
                 ch.basic_nack(delivery_tag=method.delivery_tag, requeue=True)
                 log(tid, None, None, None, redelivered, "requeue")
             return
 
-        # 2. Attempts: we are the only writer while we hold the lease.
+        # 2. attempts + 1 (safe: we hold the claim)
         row = session.execute(st["get_att"], (run, tid)).one()
         attempts = ((row.attempts or 0) if row else 0) + 1
         session.execute(st["set_att"], (attempts, run, tid))
@@ -122,7 +120,7 @@ def worker_thread(idx, qname, prefetch, session, st):
         if attempts > 1:
             count(session, st, run, me, "reexecutions")
 
-        # 3. Execute, renewing the lease in the background.
+        # 3. run, renewing the lease
         finished, lost = threading.Event(), threading.Event()
         ren = threading.Thread(target=renewer,
                                args=(session, st, run, tid, me, finished, lost),
@@ -132,13 +130,13 @@ def worker_thread(idx, qname, prefetch, session, st):
         finished.set()
         ren.join()
 
-        # 4. Publish the result, confirmed
+        # 4. publish the result
         pub.basic_publish(exchange="", routing_key=f"{run}.results",
                           body=common.encode_result(run, tid, status, me,
                                                     start, end, attempts),
-                          properties=props, mandatory=True)
+                          properties=props, mandatory=durable)
 
-        # 5. DONE, only if we still own the claim.
+        # 5. DONE (LWT, permanent)
         rs = session.execute(st["done"], (run, tid, me))
         outcome = "done"
         if rs.was_applied:
@@ -146,14 +144,12 @@ def worker_thread(idx, qname, prefetch, session, st):
         else:
             outcome = "lost-lease"
 
-        # 6. Ack, only after the result is published.
+        # 6. ack, only now
         ch.basic_ack(delivery_tag=method.delivery_tag)
         log(tid, start, end, status, redelivered, outcome)
 
     def on_task_safe(ch, method, properties, body):
-        """Any error (e.g. Cassandra briefly unavailable) must not kill the
-        thread: log it and give the message back. If we held the claim, it
-        expires after CLAIM_TTL and the task is re-run (at-least-once)."""
+        """Any error (e.g."""
         activity(+1)
         try:
             on_task(ch, method, properties, body)
@@ -176,9 +172,6 @@ def worker_thread(idx, qname, prefetch, session, st):
     conn.close()
 
 
-
-# Main
-
 def check_queue(qname):
     """Passive declare of QNAME.tasks: exit non-zero if it does not exist."""
     import pika
@@ -199,27 +192,26 @@ def main():
                    help="leave after IDLE s without any task (0 = never)")
     args = p.parse_args()
 
-    # Show the Cassandra driver's warnings (hidden by default) in the log.
     logging.basicConfig(level=logging.WARNING, stream=sys.stdout,
                         format="# %(asctime)s %(name)s %(levelname)s %(message)s")
     check_queue(args.qname)
     cluster, session = common.cassandra_connect()
     st = prepare(session)
+    durable = mgmt.durable_mode(args.qname)
 
     signal.signal(signal.SIGTERM, lambda *_: stop.set())
     signal.signal(signal.SIGINT, lambda *_: stop.set())
 
     print(common.provenance_header(), flush=True)
     print(f"# worker qname={args.qname} threads={args.threads} prefetch={args.prefetch} "
-          f"idle={args.idle}", flush=True)
+          f"idle={args.idle} durable={durable}", flush=True)
     print("id,start,end,status,redelivered,outcome", flush=True)
 
     threads = [threading.Thread(target=worker_thread,
-                                args=(i, args.qname, args.prefetch, session, st))
+                                args=(i, args.qname, args.prefetch, session, st, durable))
                for i in range(args.threads)]
     for t in threads:
         t.start()
-
     while any(t.is_alive() for t in threads):
         for t in threads:
             t.join(timeout=0.5)

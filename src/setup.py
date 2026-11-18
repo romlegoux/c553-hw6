@@ -24,7 +24,10 @@ def main():
 
         for q_suffix in ["tasks", "results"]:
             q_name = f"{qname}.{q_suffix}"
-            channel.queue_declare(queue=q_name, durable=True, arguments={"x-queue-type": "quorum", "x-delivery-limit": 1000})
+            durable = os.environ.get("CK_DURABLE", "1") != "0"
+            args = ({"x-queue-type": "quorum", "x-delivery-limit": 1000} if durable
+                else {"x-queue-type": "classic"})      # Q6: classic, no delivery limit
+            channel.queue_declare(queue=q_name, durable=True, arguments=args)
             print(f"RabbitMQ OK : Queue '{q_name}' declared.")
         conn.close()
     except Exception as e:
