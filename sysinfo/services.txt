@@ -1,0 +1,72 @@
+Wed Nov 18 22:27:54 UTC 2026
+hw6---rlegoux
+== docker ps
+CONTAINER ID   IMAGE                      COMMAND                  CREATED      STATUS      PORTS                                                                                                                                                                   NAMES
+d5647405ba71   chrislusf/seaweedfs:4.48   "/entrypoint.sh mini…"   6 days ago   Up 6 days   7333/tcp, 8080/tcp, 8888/tcp, 0.0.0.0:8333->8333/tcp, [::]:8333->8333/tcp, 9333/tcp, 18080/tcp, 18888/tcp, 19333/tcp, 0.0.0.0:12535->12535/tcp, [::]:12535->12535/tcp   seaweedfs
+3aefd9ed62f8   cassandra:5.0              "docker-entrypoint.s…"   6 days ago   Up 6 days   7000-7001/tcp, 7199/tcp, 9160/tcp, 0.0.0.0:9042->9042/tcp, [::]:9042->9042/tcp                                                                                          cassandra
+e0ffabda6ecd   rabbitmq:4.3-management    "docker-entrypoint.s…"   6 days ago   Up 6 days   4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, [::]:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp, [::]:15672->15672/tcp                 rabbitmq
+== list_queues
+Timeout: 60.0 seconds ...
+Listing queues for vhost / ...
+name	type	messages	consumers
+k9.results	quorum	11	0
+p6.tasks	quorum	0	0
+e-w4.tasks	quorum	0	0
+p2b.results	quorum	0	0
+test.results	quorum	0	0
+e-p10.results	quorum	0	0
+e-w8.tasks	quorum	0	0
+p2test.tasks	quorum	0	0
+p2e.results	quorum	0	0
+e-w4.results	quorum	0	0
+el-iv.results	quorum	0	0
+el-iii.results	quorum	0	0
+q6-fast.results	classic	0	0
+e-w2.results	quorum	0	0
+q6-fast.tasks	classic	0	0
+el-iii.tasks	quorum	0	0
+e-w2.tasks	quorum	0	0
+k9b.tasks	quorum	1600	0
+el-ii.results	quorum	0	0
+el-iv.tasks	quorum	0	0
+el-i.tasks	quorum	0	0
+p2b.tasks	quorum	0	0
+k9c.results	quorum	0	0
+e-smoke.results	quorum	0	0
+st.tasks	quorum	0	0
+e-smoke.tasks	quorum	0	0
+pf.tasks	quorum	0	0
+el-i.results	quorum	0	0
+pf.results	quorum	0	0
+p6a.results	quorum	0	0
+p6.results	quorum	0	0
+test.tasks	quorum	0	0
+st.results	quorum	0	0
+k9b.results	quorum	0	0
+p2d.results	quorum	0	0
+k9c.tasks	quorum	0	0
+e-p100.results	quorum	0	0
+k9.tasks	quorum	0	0
+lease.tasks	quorum	0	0
+e-w1.tasks	quorum	0	0
+e-w1.results	quorum	0	0
+e-w8.results	quorum	0	0
+p6a.tasks	quorum	0	0
+el-ii.tasks	quorum	0	0
+p2e.tasks	quorum	0	0
+e-p10.tasks	quorum	0	0
+lease.results	quorum	0	0
+p2d.tasks	quorum	0	0
+e-p100.tasks	quorum	0	0
+p2test.results	quorum	0	0
+== nodetool status
+Datacenter: datacenter1
+=======================
+Status=Up/Down
+|/ State=Normal/Leaving/Joining/Moving
+--  Address     Load        Tokens  Owns (effective)  Host ID                               Rack 
+UN  172.17.0.3  266.31 MiB  16      100.0%            2ff19568-d5d1-4f78-b3f3-f618ea56813a  rack1
+
+== nodetool version
+ReleaseVersion: 5.0.9
+== SeaweedFS buckets
