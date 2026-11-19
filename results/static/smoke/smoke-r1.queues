@@ -1,14 +1,14 @@
-# vm=svc node=hw6---rlegoux utc=2026-11-15T21:47:14Z commit=4a88ac8
+# vm=svc node=hw6---rlegoux utc=2026-11-18T22:28:12Z commit=33ab108
 # utc name,type,ready,unacked,consumers
-21:47:14 e-smoke.results,quorum,0,0,0 e-smoke.tasks,quorum,0,0,8 
-21:47:21 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,3681,8,8 
-21:47:27 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,7960,8,8 
-21:47:33 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,7708,8,8 
-21:47:40 e-smoke.results,quorum,0,1,1 e-smoke.tasks,quorum,6984,8,8 
-21:47:46 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,5581,8,8 
-21:47:52 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,4921,8,8 
-21:47:59 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,4248,8,8 
-21:48:05 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,3540,8,8 
-21:48:11 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,2221,8,8 
-21:48:17 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,1576,8,8 
-21:48:24 e-smoke.results,quorum,0,1,1 e-smoke.tasks,quorum,877,8,8 
+22:28:12 e-smoke.results,quorum,0,0,0 e-smoke.tasks,quorum,0,0,8 
+22:28:18 e-smoke.results,quorum,0,2,1 e-smoke.tasks,quorum,3638,8,8 
+22:28:25 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,8265,8,8 
+22:28:31 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,7723,8,8 
+22:28:37 e-smoke.results,quorum,0,1,1 e-smoke.tasks,quorum,7033,8,8 
+22:28:43 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,6346,8,8 
+22:28:49 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,4997,8,8 
+22:28:56 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,4303,8,8 
+22:29:02 e-smoke.results,quorum,0,0,1 e-smoke.tasks,quorum,3579,8,8 
+22:29:08 e-smoke.results,quorum,0,2,1 e-smoke.tasks,quorum,2116,8,8 
+22:29:15 e-smoke.results,quorum,0,2,1 e-smoke.tasks,quorum,1437,8,8 
+22:29:21 e-smoke.results,quorum,0,2,1 e-smoke.tasks,quorum,782,8,8 

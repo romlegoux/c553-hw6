@@ -1,7 +1,7 @@
+# vm=ckw8 node=hw6---rlegoux utc=2026-11-16T00:03:06Z commit=143ea97
 # 2026-11-16 00:03:05,755 cassandra.cluster WARNING Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['10.211.245.23'], lbp = None)
 # 2026-11-16 00:03:05,764 cassandra.cluster WARNING Downgrading core protocol version from 66 to 65 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
 # 2026-11-16 00:03:05,766 cassandra.cluster WARNING Downgrading core protocol version from 65 to 5 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
-# vm=ckw8 node=hw6---rlegoux utc=2026-11-16T00:03:06Z commit=143ea97
 # worker qname=e-p10 threads=8 prefetch=10 idle=0
 id,start,end,status,redelivered,outcome
 tiny-36291-0000048,1794787418.984739,1794787418.985141,0,0,done

@@ -1,0 +1,8 @@
+# vm=tiny node=hw6---rlegoux utc=2026-11-18T22:43:53Z commit=35e3e94
+tasks              : 8000
+successes          : 8000
+failures           : 0
+duplicates ignored : 0
+time (s)           : 10.142
+throughput (t/s)   : 788.8
+messages published : 8000

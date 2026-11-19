@@ -1,8 +1,8 @@
+# vm=tiny node=hw6---rlegoux utc=2026-11-15T23:55:17Z commit=4a88ac8
 # 2026-11-15 23:54:50,227 cassandra.cluster WARNING Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['10.211.245.23'], lbp = None)
 # 2026-11-15 23:54:50,230 cassandra.cluster WARNING Downgrading core protocol version from 66 to 65 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
 # 2026-11-15 23:54:50,233 cassandra.cluster WARNING Downgrading core protocol version from 65 to 5 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
 all 10000 tasks submitted (11026 messages), waiting for results...
-# vm=tiny node=hw6---rlegoux utc=2026-11-15T23:55:17Z commit=4a88ac8
 tasks              : 10000
 successes          : 10000
 failures           : 0

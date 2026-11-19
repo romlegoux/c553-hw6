@@ -1,22 +1,22 @@
-# vm=svc node=hw6---rlegoux utc=2026-11-15T21:48:29Z commit=4a88ac8
+# vm=svc node=hw6---rlegoux utc=2026-11-18T22:29:26Z commit=33ab108
 
- worker       | name       | value
---------------+------------+-------
- ckw1/1092/t0 | deliveries |  1250
- ckw1/1092/t0 | executions |  1250
- ckw1/1092/t1 | deliveries |  1246
- ckw1/1092/t1 | executions |  1246
- ckw1/1092/t2 | deliveries |  1255
- ckw1/1092/t2 | executions |  1255
- ckw1/1092/t3 | deliveries |  1249
- ckw1/1092/t3 | executions |  1249
- ckw1/1092/t4 | deliveries |  1249
- ckw1/1092/t4 | executions |  1249
- ckw1/1092/t5 | deliveries |  1253
- ckw1/1092/t5 | executions |  1253
- ckw1/1092/t6 | deliveries |  1250
- ckw1/1092/t6 | executions |  1250
- ckw1/1092/t7 | deliveries |  1248
- ckw1/1092/t7 | executions |  1248
+ worker      | name       | value
+-------------+------------+-------
+ ckw1/971/t0 | deliveries |  1256
+ ckw1/971/t0 | executions |  1256
+ ckw1/971/t1 | deliveries |  1248
+ ckw1/971/t1 | executions |  1248
+ ckw1/971/t2 | deliveries |  1259
+ ckw1/971/t2 | executions |  1259
+ ckw1/971/t3 | deliveries |  1247
+ ckw1/971/t3 | executions |  1247
+ ckw1/971/t4 | deliveries |  1254
+ ckw1/971/t4 | executions |  1254
+ ckw1/971/t5 | deliveries |  1247
+ ckw1/971/t5 | executions |  1247
+ ckw1/971/t6 | deliveries |  1243
+ ckw1/971/t6 | executions |  1243
+ ckw1/971/t7 | deliveries |  1246
+ ckw1/971/t7 | executions |  1246
 
 (16 rows)
