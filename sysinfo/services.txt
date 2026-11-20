@@ -1,10 +1,10 @@
-Wed Nov 18 22:27:54 UTC 2026
+Fri Nov 20 00:47:50 UTC 2026
 hw6---rlegoux
 == docker ps
 CONTAINER ID   IMAGE                      COMMAND                  CREATED      STATUS      PORTS                                                                                                                                                                   NAMES
-d5647405ba71   chrislusf/seaweedfs:4.48   "/entrypoint.sh mini…"   6 days ago   Up 6 days   7333/tcp, 8080/tcp, 8888/tcp, 0.0.0.0:8333->8333/tcp, [::]:8333->8333/tcp, 9333/tcp, 18080/tcp, 18888/tcp, 19333/tcp, 0.0.0.0:12535->12535/tcp, [::]:12535->12535/tcp   seaweedfs
-3aefd9ed62f8   cassandra:5.0              "docker-entrypoint.s…"   6 days ago   Up 6 days   7000-7001/tcp, 7199/tcp, 9160/tcp, 0.0.0.0:9042->9042/tcp, [::]:9042->9042/tcp                                                                                          cassandra
-e0ffabda6ecd   rabbitmq:4.3-management    "docker-entrypoint.s…"   6 days ago   Up 6 days   4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, [::]:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp, [::]:15672->15672/tcp                 rabbitmq
+d5647405ba71   chrislusf/seaweedfs:4.48   "/entrypoint.sh mini…"   7 days ago   Up 7 days   7333/tcp, 8080/tcp, 8888/tcp, 0.0.0.0:8333->8333/tcp, [::]:8333->8333/tcp, 9333/tcp, 18080/tcp, 18888/tcp, 19333/tcp, 0.0.0.0:12535->12535/tcp, [::]:12535->12535/tcp   seaweedfs
+3aefd9ed62f8   cassandra:5.0              "docker-entrypoint.s…"   7 days ago   Up 7 days   7000-7001/tcp, 7199/tcp, 9160/tcp, 0.0.0.0:9042->9042/tcp, [::]:9042->9042/tcp                                                                                          cassandra
+e0ffabda6ecd   rabbitmq:4.3-management    "docker-entrypoint.s…"   7 days ago   Up 7 days   4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, [::]:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp, [::]:15672->15672/tcp                 rabbitmq
 == list_queues
 Timeout: 60.0 seconds ...
 Listing queues for vhost / ...
@@ -32,9 +32,9 @@ el-iv.tasks	quorum	0	0
 el-i.tasks	quorum	0	0
 p2b.tasks	quorum	0	0
 k9c.results	quorum	0	0
-e-smoke.results	quorum	0	0
+e-smoke.results	quorum	0	1
 st.tasks	quorum	0	0
-e-smoke.tasks	quorum	0	0
+e-smoke.tasks	quorum	7302	8
 pf.tasks	quorum	0	0
 el-i.results	quorum	0	0
 pf.results	quorum	0	0
@@ -64,9 +64,10 @@ Datacenter: datacenter1
 =======================
 Status=Up/Down
 |/ State=Normal/Leaving/Joining/Moving
---  Address     Load        Tokens  Owns (effective)  Host ID                               Rack 
-UN  172.17.0.3  266.31 MiB  16      100.0%            2ff19568-d5d1-4f78-b3f3-f618ea56813a  rack1
+--  Address     Load       Tokens  Owns (effective)  Host ID                               Rack 
+UN  172.17.0.3  269.7 MiB  16      100.0%            2ff19568-d5d1-4f78-b3f3-f618ea56813a  rack1
 
 == nodetool version
 ReleaseVersion: 5.0.9
 == SeaweedFS buckets
+  results	size:0	logical:0	chunk:0
