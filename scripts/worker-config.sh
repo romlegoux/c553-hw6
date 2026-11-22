@@ -14,5 +14,6 @@ get() { curl -sf --unix-socket /dev/lxd/sock "http://lxd/1.0/config/user.ck.$1" 
   echo "THREADS=$(get threads)"
   echo "PREFETCH=$(get prefetch)"
   echo "IDLE=$(get idle)"
+  echo "WHISPER=$(get whisper)"
 } > /run/ck-worker.conf
 chmod 644 /run/ck-worker.conf

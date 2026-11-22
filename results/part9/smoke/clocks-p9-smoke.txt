@@ -1,0 +1,47 @@
+# vm=node node=hw6---rlegoux utc=2026-11-20T01:47:35Z commit=efed0c9
+== node
+Reference ID    : 6C205D39 (pool-108-32-93-57.pitbpa.fios.verizon.net)
+Stratum         : 3
+Ref time (UTC)  : Fri Nov 20 01:32:58 2026
+System time     : 0.000435686 seconds fast of NTP time
+Last offset     : +0.000063319 seconds
+RMS offset      : 0.000242417 seconds
+Frequency       : 33.686 ppm fast
+Residual freq   : +0.001 ppm
+Skew            : 0.019 ppm
+Root delay      : 0.014066409 seconds
+Root dispersion : 0.001845683 seconds
+Update interval : 1033.9 seconds
+Leap status     : Normal
+== tiny
+       Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 34min 8s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: DA45F1D0
+    Precision: 1us (-25)
+Root distance: 770us (max: 5s)
+       Offset: +1.233ms
+        Delay: 85.319ms
+       Jitter: 2.237ms
+ Packet count: 292
+    Frequency: -33.567ppm
+== svc
+       Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 34min 8s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: DA45F1D0
+    Precision: 1us (-25)
+Root distance: 793us (max: 5s)
+       Offset: -807us
+        Delay: 87.088ms
+       Jitter: 901us
+ Packet count: 249
+    Frequency: -33.906ppm
+== ckw1
+       Server: n/a (ntp.ubuntu.com)
+Poll interval: 0 (min: 32s; max 34min 8s)
+ Packet count: 0

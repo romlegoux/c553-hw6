@@ -23,13 +23,16 @@ def hostname():
     """Short hostname of this VM (tiny, small3, ...)."""
     return socket.gethostname().split(".")[0]
 
-def rabbit_connect(name=None):
+def rabbit_connect(name=None, heartbeat=None):
     """Open a blocking RabbitMQ connection from CK_AMQP_URL.
-    One connection/channel per thread: pika objects are NOT thread-safe."""
+    One connection/channel per thread: pika objects are NOT thread-safe.
+    heartbeat=0 disables heartbeats (a thread busy on a long task cannot answer them)."""
     import pika
     params = pika.URLParameters(env("CK_AMQP_URL"))
     if name:
         params.client_properties = {"connection_name": name}
+    if heartbeat is not None:
+        params.heartbeat = heartbeat
 
     return pika.BlockingConnection(params)
 
@@ -166,4 +169,3 @@ def write_csv(records, path):
 def exit_code(records):
     """0 if every task succeeded, 1 otherwise."""
     return 0 if all(r["status"] == 0 for r in records.values()) else 1
-

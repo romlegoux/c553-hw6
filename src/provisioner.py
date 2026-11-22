@@ -72,7 +72,8 @@ def launch(name, args, idle):
            "-c", f"user.ck.qname={args.qname}",
            "-c", f"user.ck.threads={args.threads}",
            "-c", f"user.ck.prefetch={args.prefetch}",
-           "-c", f"user.ck.idle={idle}"]
+           "-c", f"user.ck.idle={idle}",
+           "-c", f"user.ck.whisper={args.xthreads}"]
     return subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
@@ -92,6 +93,7 @@ def main():
     p.add_argument("--idle", type=int, default=30, help="idle time of workers above MIN (s)")
     p.add_argument("-t", dest="threads", type=int, default=8)
     p.add_argument("-p", dest="prefetch", type=int, default=1)
+    p.add_argument("-x", dest="xthreads", type=int, default=1, help="whisper threads per task (Part 9)")
     args = p.parse_args()
     if not 0 <= args.vmin <= args.vmax:
         p.error("need 0 <= MIN <= MAX")
@@ -115,7 +117,7 @@ def main():
     print(common.provenance_header(), flush=True)
     print(f"# provisioner qname={args.qname} min={args.vmin} max={args.vmax} "
           f"idle={'static' if static else args.idle} threads={args.threads} "
-          f"prefetch={args.prefetch}", flush=True)
+          f"prefetch={args.prefetch} x={args.xthreads}", flush=True)
     print("utc,ready,unacked,consumers,active,booting,leaving,total,started", flush=True)
 
     vms = {}

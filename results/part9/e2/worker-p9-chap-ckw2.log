@@ -1,0 +1,32 @@
+# 2026-11-20 16:04:42,776 cassandra.cluster WARNING Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['10.211.245.23'], lbp = None)
+# 2026-11-20 16:04:42,797 cassandra.cluster WARNING Downgrading core protocol version from 66 to 65 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+# 2026-11-20 16:04:42,802 cassandra.cluster WARNING Downgrading core protocol version from 65 to 5 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+# vm=ckw2 node=hw6---rlegoux utc=2026-11-20T16:04:43Z commit=efed0c9
+# worker qname=p9-chap threads=8 prefetch=1 idle=0 durable=True x=1
+id,start,end,status,redelivered,outcome
+1284-1180,1795190689.235903,1795190879.759407,0,1,done
+121-127105,1795190689.235682,1795190889.469682,0,1,done
+1089-134686,1795190689.235950,1795190897.952565,0,1,done
+7176-92135,1795190689.235737,1795190942.834304,0,1,done
+2300-131720,1795190689.231815,1795190944.352250,0,1,done
+1188-133604,1795190689.235882,1795190965.752779,0,1,done
+61-70968,1795190689.235815,1795191018.205447,0,1,lost-lease
+3575-170457,1795190689.235854,1795191033.675397,0,1,lost-lease
+3570-5696,1795190981.557077,1795191081.445446,0,0,done
+1221-135766,1795190981.508336,1795191117.476112,0,0,done
+7021-79759,1795191081.491225,1795191127.255679,0,0,done
+2961-960,1795190981.551934,1795191175.448720,0,0,done
+merge-5683-32879,1795191186.088963,1795191186.330693,0,0,done
+7021-85628,1795191018.263025,1795191219.421718,0,0,done
+merge-7021-85628,1795191219.444081,1795191219.633936,0,0,done
+1284-1180,1795190981.470420,1795191229.059960,0,0,done
+6829-68771,1795190981.598838,1795191246.812385,0,0,done
+7127-75946,1795191033.723034,1795191247.516253,0,0,done
+8463-294825,1795191127.298880,1795191257.880445,0,0,done
+merge-1580-141084,1795191301.484022,1795191301.722666,0,0,done
+merge-2300-131720,1795191308.989988,1795191309.393617,0,0,done
+1188-133604,1795190981.431463,1795191321.324704,0,0,done
+merge-6829-68769,1795191326.794351,1795191327.080308,0,0,done
+7176-92135,1795191117.523769,1795191391.470603,0,0,done
+merge-5142-33396,1795191391.273038,1795191391.701900,0,0,done
+merge-2094-142345,,,,0,dup

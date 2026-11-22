@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """CS553 HW6 worker, one per worker VM.
 
-  worker -s QNAME -t N [-p PREFETCH] [-i IDLE]
+  worker -s QNAME -t N [-p PREFETCH] [-i IDLE] [-x WHISPER_THREADS]
 
 Per task: claim (LWT, 30 s lease) -> run -> publish result -> DONE (LWT) -> ack.
 """
 
 import argparse
+import json
 import logging
 import os
 import signal
@@ -15,6 +16,7 @@ import threading
 import time
 
 import common
+import jobs
 import mgmt
 
 CLAIM_TTL = 30        # lease length (s)
@@ -22,6 +24,7 @@ RENEW_EVERY = 10
 REQUEUE_DELAY = 2.0
 
 stop = threading.Event()
+crashed = threading.Event()
 
 activity_lock = threading.Lock()
 last_activity = time.time()
@@ -68,10 +71,10 @@ def renewer(session, st, run, tid, me, finished, lost):
             return
 
 
-def worker_thread(idx, qname, prefetch, session, st, durable):
+def worker_thread(idx, qname, prefetch, session, st, durable, xthreads):
     import pika
     me = f"{common.hostname()}/{os.getpid()}/t{idx}"     # unique per thread AND process
-    conn = common.rabbit_connect(name=common.hostname())
+    conn = common.rabbit_connect(name=common.hostname(), heartbeat=0)
     ch = conn.channel()                                  # consuming channel
     ch.basic_qos(prefetch_count=prefetch)
     pub = conn.channel()                                 # publishing channel
@@ -79,6 +82,7 @@ def worker_thread(idx, qname, prefetch, session, st, durable):
         pub.confirm_delivery()                           # transient results
     props = pika.BasicProperties(delivery_mode=2 if durable else 1,
                                  content_type="application/json")
+    ctx = {"session": session, "x": xthreads, "s3": None}
 
     def log(tid, start, end, status, redelivered, outcome):
         s = f"{start:.6f}" if start else ""
@@ -126,14 +130,23 @@ def worker_thread(idx, qname, prefetch, session, st, durable):
                                args=(session, st, run, tid, me, finished, lost),
                                daemon=True)
         ren.start()
-        status, start, end = common.run_task(cmd)
+        extra, follow = {}, []
+        if jobs.is_job(cmd):
+            status, start, end, extra, follow = jobs.run(cmd, run, tid, ctx)
+        else:
+            status, start, end = common.run_task(cmd)
         finished.set()
         ren.join()
 
-        # 4. publish the result
+        # 4. publish the follow-up merge task (Part 9), then the result
+        for fid, fcmd in follow:
+            pub.basic_publish(exchange="", routing_key=f"{run}.tasks",
+                              body=common.encode_task(run, fid, fcmd),
+                              properties=props, mandatory=durable)
+        result = common.decode(common.encode_result(run, tid, status, me, start, end, attempts))
+        result.update(extra)
         pub.basic_publish(exchange="", routing_key=f"{run}.results",
-                          body=common.encode_result(run, tid, status, me,
-                                                    start, end, attempts),
+                          body=json.dumps(result).encode(),
                           properties=props, mandatory=durable)
 
         # 5. DONE (LWT, permanent)
@@ -165,11 +178,16 @@ def worker_thread(idx, qname, prefetch, session, st, durable):
 
     tag =ch.basic_consume(queue=f"{qname}.tasks", on_message_callback=on_task_safe)
 
-    while not stop.is_set():
-        conn.process_data_events(time_limit=1)
-
-    ch.basic_cancel(tag)
-    conn.close()
+    try:
+        while not stop.is_set():
+            conn.process_data_events(time_limit=1)
+        ch.basic_cancel(tag)
+        conn.close()
+    except Exception as e:
+        # Lost connection: let the process exit 1 so that systemd restarts it
+        # (exit 0 would power the VM off).
+        print(f"# thread {idx} died: {e!r}", flush=True)
+        crashed.set()
 
 
 def check_queue(qname):
@@ -188,6 +206,8 @@ def main():
     p.add_argument("-s", dest="qname", required=True, help="run name QNAME")
     p.add_argument("-t", dest="threads", type=int, default=8, help="worker threads")
     p.add_argument("-p", dest="prefetch", type=int, default=1, help="prefetch per thread")
+    p.add_argument("-x", dest="xthreads", type=int, default=1,
+                   help="whisper threads per task (Part 9)")
     p.add_argument("-i", dest="idle", type=float, default=0,
                    help="leave after IDLE s without any task (0 = never)")
     args = p.parse_args()
@@ -204,17 +224,19 @@ def main():
 
     print(common.provenance_header(), flush=True)
     print(f"# worker qname={args.qname} threads={args.threads} prefetch={args.prefetch} "
-          f"idle={args.idle} durable={durable}", flush=True)
+          f"idle={args.idle} durable={durable} x={args.xthreads}", flush=True)
     print("id,start,end,status,redelivered,outcome", flush=True)
 
     threads = [threading.Thread(target=worker_thread,
-                                args=(i, args.qname, args.prefetch, session, st, durable))
+                                args=(i, args.qname, args.prefetch, session, st, durable, args.xthreads))
                for i in range(args.threads)]
     for t in threads:
         t.start()
     while any(t.is_alive() for t in threads):
         for t in threads:
             t.join(timeout=0.5)
+        if crashed.is_set() and not stop.is_set():
+            stop.set()                   # restart the whole worker at full capacity
         if args.idle and not stop.is_set():
             with activity_lock:
                 idle_for, running = time.time() - last_activity, busy
@@ -223,6 +245,9 @@ def main():
                 stop.set()
 
     cluster.shutdown()
+    if crashed.is_set():
+        print("# a worker thread died: exit 1 (systemd restarts the worker)", flush=True)
+        sys.exit(1)
     print("# worker stopped", flush=True)
 
 

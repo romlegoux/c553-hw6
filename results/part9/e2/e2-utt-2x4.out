@@ -1,0 +1,104 @@
+# mode: durable (quorum, persistent, confirms)
+# 2026-11-20 02:11:15,896 cassandra.cluster WARNING Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['10.211.245.23'], lbp = None)
+# 2026-11-20 02:11:15,902 cassandra.cluster WARNING Downgrading core protocol version from 66 to 65 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+# 2026-11-20 02:11:15,904 cassandra.cluster WARNING Downgrading core protocol version from 65 to 5 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+all 2620 tasks submitted (2620 messages), waiting for results...
+job 1089-134691 done in 402.1 s: 26 utterances, WER 4.56%, results/1089-134691/transcript.txt
+job 121-123852 done in 402.2 s: 5 utterances, WER 8.16%, results/121-123852/transcript.txt
+job 1089-134686 done in 402.2 s: 38 utterances, WER 3.05%, results/1089-134686/transcript.txt
+job 121-123859 done in 402.2 s: 5 utterances, WER 10.70%, results/121-123859/transcript.txt
+job 1284-134647 done in 402.3 s: 8 utterances, WER 1.74%, results/1284-134647/transcript.txt
+job 1221-135766 done in 402.4 s: 16 utterances, WER 2.16%, results/1221-135766/transcript.txt
+job 1320-122612 done in 402.4 s: 17 utterances, WER 2.40%, results/1320-122612/transcript.txt
+job 1221-135767 done in 402.4 s: 25 utterances, WER 2.97%, results/1221-135767/transcript.txt
+job 121-127105 done in 402.5 s: 37 utterances, WER 1.53%, results/121-127105/transcript.txt
+job 1995-1836 done in 402.6 s: 15 utterances, WER 20.44%, results/1995-1836/transcript.txt
+job 121-121726 done in 402.6 s: 15 utterances, WER 5.93%, results/121-121726/transcript.txt
+job 1320-122617 done in 402.7 s: 42 utterances, WER 2.71%, results/1320-122617/transcript.txt
+job 1995-1826 done in 402.7 s: 27 utterances, WER 5.11%, results/1995-1826/transcript.txt
+job 1188-133604 done in 402.9 s: 45 utterances, WER 2.55%, results/1188-133604/transcript.txt
+job 1284-1181 done in 402.9 s: 22 utterances, WER 1.10%, results/1284-1181/transcript.txt
+job 1995-1837 done in 402.9 s: 30 utterances, WER 2.97%, results/1995-1837/transcript.txt
+job 1580-141083 done in 403.0 s: 54 utterances, WER 3.25%, results/1580-141083/transcript.txt
+job 1580-141084 done in 403.0 s: 51 utterances, WER 3.97%, results/1580-141084/transcript.txt
+job 237-134493 done in 403.0 s: 19 utterances, WER 4.39%, results/237-134493/transcript.txt
+job 2830-3979 done in 403.1 s: 13 utterances, WER 1.52%, results/2830-3979/transcript.txt
+job 237-134500 done in 403.1 s: 43 utterances, WER 3.86%, results/237-134500/transcript.txt
+job 1284-1180 done in 403.1 s: 33 utterances, WER 3.50%, results/1284-1180/transcript.txt
+job 237-126133 done in 403.2 s: 26 utterances, WER 2.95%, results/237-126133/transcript.txt
+job 2300-131720 done in 403.2 s: 42 utterances, WER 3.68%, results/2300-131720/transcript.txt
+job 3570-5696 done in 403.2 s: 11 utterances, WER 4.38%, results/3570-5696/transcript.txt
+job 2961-960 done in 403.2 s: 23 utterances, WER 3.28%, results/2961-960/transcript.txt
+job 3570-5694 done in 403.2 s: 23 utterances, WER 3.50%, results/3570-5694/transcript.txt
+job 260-123440 done in 403.2 s: 21 utterances, WER 3.32%, results/260-123440/transcript.txt
+job 260-123286 done in 403.2 s: 32 utterances, WER 5.66%, results/260-123286/transcript.txt
+job 2961-961 done in 403.2 s: 23 utterances, WER 7.36%, results/2961-961/transcript.txt
+job 2094-142345 done in 403.3 s: 61 utterances, WER 6.86%, results/2094-142345/transcript.txt
+job 260-123288 done in 403.3 s: 29 utterances, WER 4.49%, results/260-123288/transcript.txt
+job 4970-29093 done in 403.3 s: 24 utterances, WER 2.17%, results/4970-29093/transcript.txt
+job 3570-5695 done in 403.3 s: 16 utterances, WER 0.44%, results/3570-5695/transcript.txt
+job 3729-6852 done in 403.4 s: 47 utterances, WER 3.94%, results/3729-6852/transcript.txt
+job 4077-13754 done in 403.4 s: 17 utterances, WER 3.76%, results/4077-13754/transcript.txt
+job 4077-13751 done in 403.4 s: 22 utterances, WER 6.47%, results/4077-13751/transcript.txt
+job 4446-2271 done in 403.4 s: 25 utterances, WER 5.06%, results/4446-2271/transcript.txt
+job 5105-28241 done in 403.4 s: 20 utterances, WER 2.98%, results/5105-28241/transcript.txt
+job 5105-28233 done in 403.5 s: 11 utterances, WER 5.68%, results/5105-28233/transcript.txt
+job 3575-170457 done in 403.5 s: 57 utterances, WER 5.44%, results/3575-170457/transcript.txt
+job 4992-41797 done in 403.5 s: 23 utterances, WER 10.78%, results/4992-41797/transcript.txt
+job 4446-2273 done in 403.5 s: 37 utterances, WER 3.04%, results/4446-2273/transcript.txt
+job 4970-29095 done in 403.5 s: 39 utterances, WER 5.71%, results/4970-29095/transcript.txt
+job 5142-36586 done in 403.5 s: 5 utterances, WER 0.00%, results/5142-36586/transcript.txt
+job 2830-3980 done in 403.6 s: 77 utterances, WER 1.96%, results/2830-3980/transcript.txt
+job 5105-28240 done in 403.6 s: 25 utterances, WER 4.36%, results/5105-28240/transcript.txt
+job 4507-16021 done in 403.6 s: 60 utterances, WER 2.71%, results/4507-16021/transcript.txt
+job 4992-23283 done in 403.6 s: 21 utterances, WER 2.26%, results/4992-23283/transcript.txt
+job 5142-36600 done in 403.6 s: 2 utterances, WER 1.56%, results/5142-36600/transcript.txt
+job 4446-2275 done in 403.7 s: 46 utterances, WER 1.74%, results/4446-2275/transcript.txt
+job 4992-41806 done in 403.6 s: 18 utterances, WER 9.05%, results/4992-41806/transcript.txt
+job 5142-33396 done in 403.7 s: 69 utterances, WER 6.00%, results/5142-33396/transcript.txt
+job 5142-36377 done in 403.7 s: 26 utterances, WER 3.69%, results/5142-36377/transcript.txt
+job 5639-40744 done in 403.7 s: 42 utterances, WER 5.39%, results/5639-40744/transcript.txt
+job 5683-32865 done in 403.7 s: 18 utterances, WER 4.78%, results/5683-32865/transcript.txt
+job 7021-79730 done in 403.7 s: 10 utterances, WER 4.63%, results/7021-79730/transcript.txt
+job 6930-76324 done in 403.7 s: 29 utterances, WER 5.05%, results/6930-76324/transcript.txt
+job 6930-81414 done in 403.8 s: 28 utterances, WER 3.71%, results/6930-81414/transcript.txt
+job 6930-75918 done in 403.8 s: 21 utterances, WER 3.76%, results/6930-75918/transcript.txt
+job 5683-32879 done in 403.8 s: 26 utterances, WER 3.44%, results/5683-32879/transcript.txt
+job 7021-79759 done in 403.8 s: 6 utterances, WER 0.82%, results/7021-79759/transcript.txt
+job 61-70970 done in 403.8 s: 41 utterances, WER 7.98%, results/61-70970/transcript.txt
+job 5683-32866 done in 403.9 s: 31 utterances, WER 5.54%, results/5683-32866/transcript.txt
+job 7176-88083 done in 403.9 s: 28 utterances, WER 2.30%, results/7176-88083/transcript.txt
+job 7021-85628 done in 403.9 s: 28 utterances, WER 2.10%, results/7021-85628/transcript.txt
+job 7021-79740 done in 403.9 s: 15 utterances, WER 5.40%, results/7021-79740/transcript.txt
+job 7127-75946 done in 403.9 s: 30 utterances, WER 4.80%, results/7127-75946/transcript.txt
+job 6829-68771 done in 403.9 s: 37 utterances, WER 4.24%, results/6829-68771/transcript.txt
+job 8224-274384 done in 403.9 s: 14 utterances, WER 1.14%, results/8224-274384/transcript.txt
+job 61-70968 done in 404.0 s: 63 utterances, WER 6.41%, results/61-70968/transcript.txt
+job 8224-274381 done in 404.0 s: 18 utterances, WER 4.46%, results/8224-274381/transcript.txt
+job 7127-75947 done in 404.0 s: 41 utterances, WER 7.87%, results/7127-75947/transcript.txt
+job 8463-294825 done in 404.0 s: 20 utterances, WER 9.66%, results/8463-294825/transcript.txt
+job 8463-287645 done in 404.0 s: 15 utterances, WER 3.41%, results/8463-287645/transcript.txt
+job 6829-68769 done in 404.0 s: 54 utterances, WER 7.50%, results/6829-68769/transcript.txt
+job 8555-292519 done in 404.0 s: 16 utterances, WER 2.80%, results/8555-292519/transcript.txt
+job 8555-284447 done in 404.1 s: 25 utterances, WER 9.11%, results/8555-284447/transcript.txt
+job 908-157963 done in 404.1 s: 31 utterances, WER 7.89%, results/908-157963/transcript.txt
+job 7729-102255 done in 404.1 s: 47 utterances, WER 5.13%, results/7729-102255/transcript.txt
+job 672-122797 done in 404.2 s: 75 utterances, WER 3.25%, results/672-122797/transcript.txt
+job 8555-284449 done in 404.2 s: 21 utterances, WER 8.38%, results/8555-284449/transcript.txt
+job 7176-92135 done in 404.2 s: 46 utterances, WER 6.20%, results/7176-92135/transcript.txt
+job 8230-279154 done in 404.2 s: 44 utterances, WER 1.05%, results/8230-279154/transcript.txt
+job 8463-294828 done in 404.4 s: 39 utterances, WER 5.20%, results/8463-294828/transcript.txt
+job 8455-210777 done in 404.4 s: 71 utterances, WER 5.67%, results/8455-210777/transcript.txt
+job 908-31957 done in 404.6 s: 26 utterances, WER 5.93%, results/908-31957/transcript.txt
+# vm=tiny node=hw6---rlegoux utc=2026-11-20T02:18:00Z commit=efed0c9
+tasks              : 2707
+successes          : 2707
+failures           : 0
+duplicates ignored : 0
+time (s)           : 404.413
+throughput (t/s)   : 6.7
+messages published : 2620
+jobs               : 87 (utt tasks, base.en)
+audio (s)          : 19455.3
+speed (audio s/s)  : 48.11
+overall WER        : 4.525%

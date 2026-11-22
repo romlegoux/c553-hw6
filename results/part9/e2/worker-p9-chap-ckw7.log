@@ -1,0 +1,20 @@
+# 2026-11-20 16:08:33,932 cassandra.cluster WARNING Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['10.211.245.23'], lbp = None)
+# 2026-11-20 16:08:33,953 cassandra.cluster WARNING Downgrading core protocol version from 66 to 65 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+# 2026-11-20 16:08:33,956 cassandra.cluster WARNING Downgrading core protocol version from 65 to 5 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+# vm=ckw7 node=hw6---rlegoux utc=2026-11-20T16:08:34Z commit=efed0c9
+# worker qname=p9-chap threads=8 prefetch=1 idle=0 durable=True x=1
+id,start,end,status,redelivered,outcome
+1995-1836,1795190983.540184,1795191109.202692,0,0,done
+237-134493,1795190983.589754,1795191129.604044,0,0,done
+237-126133,1795190983.834055,1795191189.020456,0,0,done
+1995-1837,1795190983.458852,1795191212.325539,0,0,done
+260-123288,1795190983.862403,1795191216.893151,0,0,done
+merge-1284-1180,1795191229.083324,1795191229.346640,0,0,done
+8224-274381,1795191109.258448,1795191263.212157,0,0,done
+237-134500,1795190983.727962,1795191274.605198,0,0,done
+merge-8555-284449,1795191284.432854,1795191284.672406,0,0,done
+8555-284447,1795191129.645898,1795191295.161207,0,0,done
+merge-8555-284447,1795191295.186307,1795191295.404365,0,0,done
+2300-131720,1795190983.428115,1795191308.966558,0,0,done
+merge-908-157963,1795191347.607332,1795191347.866150,0,0,done
+2094-142345,1795190983.848058,1795191402.814722,0,0,done

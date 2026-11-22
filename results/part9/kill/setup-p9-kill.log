@@ -1,0 +1,10 @@
+Starting setup for run: p9-kill
+
+ Setting up RabbitMQ queues
+RabbitMQ OK : Queue 'p9-kill.tasks' declared.
+RabbitMQ OK : Queue 'p9-kill.results' declared.
+
+ Setting up Cassandra
+Cassandra OK 
+
+Setup finished ok

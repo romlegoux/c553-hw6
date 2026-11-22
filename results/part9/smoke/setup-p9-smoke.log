@@ -1,0 +1,10 @@
+Starting setup for run: p9-smoke
+
+ Setting up RabbitMQ queues
+RabbitMQ OK : Queue 'p9-smoke.tasks' declared.
+RabbitMQ OK : Queue 'p9-smoke.results' declared.
+
+ Setting up Cassandra
+Cassandra OK 
+
+Setup finished ok

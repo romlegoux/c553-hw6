@@ -1,0 +1,10 @@
+Starting setup for run: p9-8x1
+
+ Setting up RabbitMQ queues
+RabbitMQ OK : Queue 'p9-8x1.tasks' declared.
+RabbitMQ OK : Queue 'p9-8x1.results' declared.
+
+ Setting up Cassandra
+Cassandra OK 
+
+Setup finished ok

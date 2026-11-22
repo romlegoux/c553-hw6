@@ -1,0 +1,10 @@
+Starting setup for run: p9-chap
+
+ Setting up RabbitMQ queues
+RabbitMQ OK : Queue 'p9-chap.tasks' declared.
+RabbitMQ OK : Queue 'p9-chap.results' declared.
+
+ Setting up Cassandra
+Cassandra OK 
+
+Setup finished ok

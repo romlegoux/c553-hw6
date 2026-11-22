@@ -3,9 +3,11 @@
 
   client -s LOCAL -t N -w WORKLOAD [-o CSV]
   client -s QNAME (-w WORKLOAD | -S SCHEDULE) [-d P] [-o CSV]
+  client -s QNAME -j JOBS_FILE [-g utt|chapter] [-m base.en|tiny.en] [-o CSV]
 """
 
 import argparse
+import json
 import logging
 import os
 import queue
@@ -115,6 +117,12 @@ def collector(qname, records, state, started):
                        status=res["status"])
             state["done"] += 1
             state["last"] = now
+            if "job" in res:                     # Part 9: a job is merged
+                s = res["summary"]
+                state["jobs"].append(res)
+                print(f"job {res['job']} done in {now - rec['submitted']:.1f} s: "
+                      f"{s['utterances']} utterances, WER {s['wer']:.2%}, {res['transcript']}",
+                      flush=True)
         ch.basic_ack(delivery_tag=method.delivery_tag)
         if state["done"] == total:
             ch.stop_consuming()
@@ -175,8 +183,32 @@ def read_schedule(path):
     return plan
 
 
-def run_remote(args, cmds, offsets=None):
-    """Returns (records, first_publish, last_result, duplicates, published)."""
+def jobs_plan(args):
+    """Part 9: one job per chapter of the jobs file, one task per utterance
+    (-g utt) or per chapter (-g chapter), plus one merge per job."""
+    import s3util
+    s3 = s3util.client()
+    tasks, jobs = [], []
+    with open(args.jobs) as f:
+        chapters = [line.strip().rstrip("/") for line in f if line.strip() and not line.startswith("#")]
+    for chapter in chapters:
+        job = "-".join(chapter.split("/")[-2:])
+        keys = [k for k in s3util.list_keys(s3, "audio", chapter + "/") if k.endswith(".flac")]
+        if not keys:
+            sys.exit(f"ERROR: no audio under audio/{chapter}/")
+        if args.gran == "utt":
+            tasks += [(os.path.basename(k)[:-5], f"transcribe {job} {len(keys)} {args.model} {k}")
+                      for k in keys]
+            ntasks = len(keys)
+        else:
+            tasks.append((job, f"transcribe-chapter {job} 1 {args.model} {chapter}"))
+            ntasks = 1
+        jobs.append((job, chapter, ntasks))
+    return {"tasks": tasks, "jobs": jobs}
+
+
+def run_remote(args, cmds, offsets=None, plan=None):
+    """Returns (records, first_publish, last_result, duplicates, published, jobs)."""
     qname = args.qname
     check_queues(qname)
     durable = mgmt.durable_mode(qname)
@@ -189,13 +221,24 @@ def run_remote(args, cmds, offsets=None):
         "VALUES (?, ?, ?, 'QUEUED', ?, 0)")
 
     cid = common.client_id()
-    tasks = [(common.task_id(cid, seq), cmd) for seq, cmd in enumerate(cmds)]
+    if plan:
+        tasks = plan["tasks"]
+    else:
+        tasks = [(common.task_id(cid, seq), cmd) for seq, cmd in enumerate(cmds)]
     records = {tid: common.new_record(tid, cmd, None) for tid, cmd in tasks}
+    if plan:                                     # Part 9: job rows before any task
+        add_job = session.prepare("INSERT INTO jobs (run, job, chapter, model, ntasks, submitted) "
+                                  "VALUES (?, ?, ?, ?, ?, ?)")
+        for job, chapter, ntasks in plan["jobs"]:
+            now = time.time()
+            session.execute(add_job, (qname, job, chapter, args.model, ntasks, now))
+            records[f"merge-{job}"] = common.new_record(f"merge-{job}", f"merge {job}", now)
     rng = random.Random(DUP_SEED)
     dup_ids = {tid for tid, _ in tasks if rng.random() < args.dup}
 
     state = {"first": None, "published": 0,                  # publishers (lock)
-             "done": 0, "dups": 0, "stray": 0, "last": None}  # collector only
+             "done": 0, "dups": 0, "stray": 0, "last": None,  # collector only
+             "jobs": []}
     lock = threading.Lock()
 
     started = threading.Event()
@@ -254,7 +297,7 @@ def run_remote(args, cmds, offsets=None):
     cluster.shutdown()
     if state["stray"]:
         print(f"note: {state['stray']} results from other runs/clients ignored")
-    return records, state["first"], state["last"], state["dups"], state["published"]
+    return records, state["first"], state["last"], state["dups"], state["published"], state["jobs"]
 
 
 def parse_args():
@@ -265,6 +308,11 @@ def parse_args():
     src.add_argument("-w", dest="workload", help="workload file (sleep MS per line)")
     src.add_argument("-S", dest="schedule",
                      help="remote only: schedule file (START DURATION RATE COMMAND)")
+    src.add_argument("-j", dest="jobs", help="Part 9: jobs file, one chapter per line")
+    p.add_argument("-g", dest="gran", choices=("utt", "chapter"), default="utt",
+                   help="Part 9: one task per utterance or per chapter")
+    p.add_argument("-m", dest="model", choices=("base.en", "tiny.en"), default="base.en",
+                   help="Part 9: whisper model")
     p.add_argument("-t", dest="threads", type=int, default=1, help="LOCAL only: number of threads")
     p.add_argument("-d", dest="dup", type=float, default=0.0,
                    help="remote only: probability of publishing a second copy")
@@ -274,8 +322,8 @@ def parse_args():
         p.error("-t must be >= 1")
     if not 0.0 <= args.dup <= 1.0:
         p.error("-d must be between 0 and 1")
-    if args.schedule and args.qname == "LOCAL":
-        p.error("-S is for the remote mode only")
+    if (args.schedule or args.jobs) and args.qname == "LOCAL":
+        p.error("-S and -j are for the remote mode only")
     return args
 
 
@@ -283,8 +331,11 @@ def main():
     logging.basicConfig(level=logging.WARNING, stream=sys.stderr,
                         format="# %(asctime)s %(name)s %(levelname)s %(message)s")
     args = parse_args()
-    offsets = None
-    if args.schedule:
+    offsets = plan = None
+    if args.jobs:
+        plan = jobs_plan(args)
+        cmds = [c for _, c in plan["tasks"]]
+    elif args.schedule:
         plan = read_schedule(args.schedule)
         offsets, cmds = [o for o, _ in plan], [c for _, c in plan]
     else:
@@ -292,15 +343,29 @@ def main():
     if not cmds:
         sys.exit("ERROR: empty workload")
 
+    jobs = []
     if args.qname == "LOCAL":
         records, first, last, dups, published = run_local(args, cmds)
     else:
-        records, first, last, dups, published = run_remote(args, cmds, offsets)
+        records, first, last, dups, published, jobs = run_remote(args, cmds, offsets, plan)
 
-    text = common.summary(records, first, last, dups)
-    common.write_summary(text + f"\nmessages published : {published}")
+    text = common.summary(records, first, last, dups) + f"\nmessages published : {published}"
+    if plan:
+        audio = sum(j["summary"]["audio_seconds"] for j in jobs)
+        errors = sum(j["summary"]["word_errors"] for j in jobs)
+        nref = sum(j["summary"]["reference_words"] for j in jobs)
+        text += (f"\njobs               : {len(jobs)} ({args.gran} tasks, {args.model})"
+                 f"\naudio (s)          : {audio:.1f}"
+                 f"\nspeed (audio s/s)  : {audio / max(last - first, 1e-9):.2f}"
+                 f"\noverall WER        : {errors / max(nref, 1):.3%}")
+    common.write_summary(text)
     if args.output:
         common.write_csv(records, args.output)
+        if plan:
+            with open(args.output + ".jobs.jsonl", "w") as f:
+                f.write(common.provenance_header() + "\n")
+                for j in jobs:
+                    f.write(json.dumps(j) + "\n")
     sys.exit(common.exit_code(records))
 
 

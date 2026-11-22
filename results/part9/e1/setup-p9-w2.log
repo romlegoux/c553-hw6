@@ -1,0 +1,10 @@
+Starting setup for run: p9-w2
+
+ Setting up RabbitMQ queues
+RabbitMQ OK : Queue 'p9-w2.tasks' declared.
+RabbitMQ OK : Queue 'p9-w2.results' declared.
+
+ Setting up Cassandra
+Cassandra OK 
+
+Setup finished ok

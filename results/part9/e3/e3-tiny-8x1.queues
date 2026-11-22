@@ -1,0 +1,26 @@
+# vm=svc node=hw6---rlegoux utc=2026-11-20T16:26:53Z commit=efed0c9
+# utc name,type,ready,unacked,consumers
+16:26:53 p9-tiny.results,quorum,0,0,0 p9-tiny.tasks,quorum,0,0,64 
+16:27:00 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,2061,64,64 
+16:27:07 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,2506,64,64 
+16:27:14 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,2360,64,64 
+16:27:21 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,2288,64,64 
+16:27:29 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,2119,64,64 
+16:27:36 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,2049,64,64 
+16:27:43 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,1977,64,64 
+16:27:50 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,1811,64,64 
+16:27:57 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,1723,64,64 
+16:28:04 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,1579,64,64 
+16:28:11 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,1513,64,64 
+16:28:19 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,1348,64,64 
+16:28:26 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,1262,64,64 
+16:28:33 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,1107,64,64 
+16:28:41 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,1040,64,64 
+16:28:48 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,872,64,64 
+16:28:55 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,788,64,64 
+16:29:02 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,707,64,64 
+16:29:10 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,538,64,64 
+16:29:17 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,467,64,64 
+16:29:25 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,328,64,64 
+16:29:32 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,249,64,64 
+16:29:39 p9-tiny.results,quorum,0,0,1 p9-tiny.tasks,quorum,85,64,64 

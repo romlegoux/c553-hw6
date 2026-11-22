@@ -1,0 +1,12 @@
+# vm=svc node=hw6---rlegoux utc=2026-11-20T01:47:42Z commit=efed0c9
+# utc name,type,ready,unacked,consumers
+01:47:42 p9-smoke.tasks,quorum,0,0,2 p9-smoke.results,quorum,0,0,0 
+01:47:48 p9-smoke.tasks,quorum,60,2,2 p9-smoke.results,quorum,0,0,1 
+01:47:55 p9-smoke.tasks,quorum,55,2,2 p9-smoke.results,quorum,0,0,1 
+01:48:02 p9-smoke.tasks,quorum,49,2,2 p9-smoke.results,quorum,0,0,1 
+01:48:08 p9-smoke.tasks,quorum,40,2,2 p9-smoke.results,quorum,0,0,1 
+01:48:15 p9-smoke.tasks,quorum,35,2,2 p9-smoke.results,quorum,0,0,1 
+01:48:22 p9-smoke.tasks,quorum,24,2,2 p9-smoke.results,quorum,0,0,1 
+01:48:29 p9-smoke.tasks,quorum,20,2,2 p9-smoke.results,quorum,0,0,1 
+01:48:36 p9-smoke.tasks,quorum,14,2,2 p9-smoke.results,quorum,0,0,1 
+01:48:43 p9-smoke.tasks,quorum,5,2,2 p9-smoke.results,quorum,0,0,1 

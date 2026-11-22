@@ -62,6 +62,12 @@ def main():
         session.execute("""CREATE TABLE IF NOT EXISTS counters (
         run text, worker text, name text, value counter,
         PRIMARY KEY ((run), worker, name))""")
+        session.execute("""CREATE TABLE IF NOT EXISTS jobs (
+        run text, job text, chapter text, model text, ntasks int, submitted double,
+        PRIMARY KEY ((run, job)))""")
+        session.execute("""CREATE TABLE IF NOT EXISTS job_tasks (
+        run text, job text, task text, audio_s double, bytes_read bigint, bytes_written bigint,
+        PRIMARY KEY ((run, job), task))""")
         
         print("Cassandra OK ")
         cluster.shutdown()

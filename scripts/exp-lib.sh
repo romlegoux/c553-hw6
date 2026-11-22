@@ -34,7 +34,8 @@ session_start() {   # Q W P DIR
   mkdir -p "$DIR"
   [ -z "$(worker_vms)" ] || { echo "ERROR: ckw VMs already exist"; exit 1; }
   on_tiny "${SETUP_ENV:-} venv/bin/python3 src/setup.py $Q" > "$DIR/setup-$Q.log" 2>&1
-  "$PY" "$REPO/src/provisioner.py" -s "$Q" --min "$W" --max "$W" -p "$P" \
+  # shellcheck disable=SC2086
+  "$PY" "$REPO/src/provisioner.py" -s "$Q" --min "$W" --max "$W" -p "$P" ${PROV_ARGS:-} \
     > "$DIR/prov-$Q.log" 2>&1 &
   PROV=$!
   log "session $Q: launching $W workers (prefetch $P)"
@@ -65,7 +66,7 @@ session_end() {
 reset_run() {
   rmq purge_queue "$Q.tasks" >/dev/null
   rmq purge_queue "$Q.results" >/dev/null
-  cql "TRUNCATE ck.tasks; TRUNCATE ck.claims; TRUNCATE ck.counters;" >/dev/null
+  cql "TRUNCATE ck.tasks; TRUNCATE ck.claims; TRUNCATE ck.counters; TRUNCATE ck.jobs; TRUNCATE ck.job_tasks;" >/dev/null
 }
 
 mon_start() {   # NAME
@@ -107,6 +108,8 @@ one_run() {
     > "$DIR/$name.out" 2>&1
   mon_stop
   on_tiny "cat ~/runs/$name.csv" > "$DIR/$name.csv"
+  on_tiny "cat ~/runs/$name.csv.jobs.jsonl 2>/dev/null" > "$DIR/$name.jobs.jsonl" \
+    || rm -f "$DIR/$name.jobs.jsonl"
   { hdr svc; cql "SELECT worker, name, value FROM ck.counters WHERE run='$Q';"; } \
     > "$DIR/$name.counters"
   log "$name: $(grep -E '^(successes|time|throughput)' "$DIR/$name.out" | tr -s ' ' | tr '\n' ' ')"

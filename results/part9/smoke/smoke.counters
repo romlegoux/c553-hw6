@@ -1,0 +1,10 @@
+# vm=svc node=hw6---rlegoux utc=2026-11-20T01:48:51Z commit=efed0c9
+
+ worker      | name       | value
+-------------+------------+-------
+ ckw1/986/t0 | deliveries |    35
+ ckw1/986/t0 | executions |    35
+ ckw1/986/t1 | deliveries |    31
+ ckw1/986/t1 | executions |    31
+
+(4 rows)

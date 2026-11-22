@@ -1,0 +1,20 @@
+# mode: durable (quorum, persistent, confirms)
+# 2026-11-20 01:47:42,802 cassandra.cluster WARNING Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['10.211.245.23'], lbp = None)
+# 2026-11-20 01:47:42,805 cassandra.cluster WARNING Downgrading core protocol version from 66 to 65 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+# 2026-11-20 01:47:42,807 cassandra.cluster WARNING Downgrading core protocol version from 65 to 5 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+# 2026-11-20 01:47:43,054 cassandra.protocol WARNING Server warning: `USE <keyspace>` with prepared statements is considered to be an anti-pattern due to ambiguity in non-qualified table names. Please consider removing instances of `Session#setKeyspace(<keyspace>)`, `Session#execute("USE <keyspace>")` and `cluster.newSession(<keyspace>)` from your code, and always use fully qualified table names (e.g. <keyspace>.<table>). Keyspace used: ck, statement keyspace: ck, statement id: eb36fc1d92b6b6bf200da0dfa49ed9f9
+all 64 tasks submitted (64 messages), waiting for results...
+job 1089-134686 done in 66.4 s: 38 utterances, WER 3.05%, results/1089-134686/transcript.txt
+job 1089-134691 done in 67.5 s: 26 utterances, WER 4.56%, results/1089-134691/transcript.txt
+# vm=tiny node=hw6---rlegoux utc=2026-11-20T01:48:50Z commit=efed0c9
+tasks              : 66
+successes          : 66
+failures           : 0
+duplicates ignored : 0
+time (s)           : 67.416
+throughput (t/s)   : 1.0
+messages published : 64
+jobs               : 2 (utt tasks, base.en)
+audio (s)          : 483.1
+speed (audio s/s)  : 7.17
+overall WER        : 3.689%

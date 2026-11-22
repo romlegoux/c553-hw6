@@ -6,7 +6,7 @@ source /run/ck-worker.conf
 
 cd /home/ubuntu/c553-hw6
 mkdir -p /home/ubuntu/logs
-ARGS=(-s "$QNAME" -t "${THREADS:-8}" -p "${PREFETCH:-1}")
+ARGS=(-s "$QNAME" -t "${THREADS:-8}" -p "${PREFETCH:-1}" -x "${WHISPER:-1}")
 if [ -n "${IDLE:-}" ] && [ "$IDLE" != 0 ]; then ARGS+=(-i "$IDLE"); fi
 
 exec venv/bin/python3 src/worker.py "${ARGS[@]}" >> "/home/ubuntu/logs/worker-$QNAME.log" 2>&1

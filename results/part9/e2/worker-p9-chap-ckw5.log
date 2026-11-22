@@ -1,0 +1,29 @@
+# 2026-11-20 16:09:25,108 cassandra.cluster WARNING Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['10.211.245.23'], lbp = None)
+# 2026-11-20 16:09:25,120 cassandra.cluster WARNING Downgrading core protocol version from 66 to 65 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+# 2026-11-20 16:09:25,123 cassandra.cluster WARNING Downgrading core protocol version from 65 to 5 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+# vm=ckw5 node=hw6---rlegoux utc=2026-11-20T16:09:25Z commit=efed0c9
+# worker qname=p9-chap threads=8 prefetch=1 idle=0 durable=True x=1
+id,start,end,status,redelivered,outcome
+5142-36600,1795190984.328584,1795191003.562297,0,0,done
+5683-32865,1795190984.069965,1795191116.723766,0,0,done
+6930-75918,1795191003.635800,1795191172.498931,0,0,done
+5105-28240,1795190983.839478,1795191175.449945,0,0,done
+merge-5105-28240,1795191175.486486,1795191175.697036,0,0,done
+4970-29093,1795190984.478710,1795191176.205899,0,0,done
+5683-32879,1795190984.223733,1795191186.057023,0,0,done
+merge-1089-134691,1795191187.610788,1795191187.824353,0,0,done
+merge-6930-76324,1795191197.723128,1795191197.976286,0,0,done
+merge-5142-36377,1795191203.015060,1795191203.251370,0,0,done
+5683-32866,1795190984.455463,1795191211.808290,0,0,done
+merge-260-123288,1795191216.919317,1795191217.118143,0,0,done
+merge-8463-287645,1795191227.143098,1795191227.298759,0,0,done
+merge-121-127105,1795191242.086029,1795191242.378005,0,0,done
+merge-7127-75946,1795191247.536134,1795191247.717652,0,0,done
+merge-4446-2275,1795191269.062635,1795191269.422166,0,0,done
+7176-88083,1795191116.769415,1795191296.035380,0,0,done
+merge-7176-88083,1795191296.058931,1795191296.282681,0,0,done
+merge-1580-141083,1795191321.600747,1795191321.831780,0,0,done
+merge-5639-40744,1795191390.054909,1795191390.402321,0,0,done
+5142-33396,1795190983.844395,1795191391.255039,0,0,done
+merge-8230-279154,1795191405.204071,1795191405.569337,0,0,done
+672-122797,1795190984.363451,1795191427.944946,0,0,done

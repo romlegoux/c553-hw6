@@ -1,0 +1,40 @@
+# vm=svc node=hw6---rlegoux utc=2026-11-20T17:32:30Z commit=efed0c9
+
+ worker       | name       | value
+--------------+------------+-------
+  ckw1/969/t0 | deliveries |   170
+  ckw1/969/t0 | executions |   170
+  ckw1/969/t1 | deliveries |   166
+  ckw1/969/t1 | executions |   166
+  ckw1/969/t2 | deliveries |   180
+  ckw1/969/t2 | executions |   180
+  ckw1/969/t3 | deliveries |   167
+  ckw1/969/t3 | executions |   167
+  ckw1/969/t4 | deliveries |   167
+  ckw1/969/t4 | executions |   167
+  ckw1/969/t5 | deliveries |   166
+  ckw1/969/t5 | executions |   166
+  ckw1/969/t6 | deliveries |   165
+  ckw1/969/t6 | executions |   165
+  ckw1/969/t7 | deliveries |   172
+  ckw1/969/t7 | executions |   172
+ ckw2/1026/t0 | deliveries |   170
+ ckw2/1026/t0 | executions |   170
+ ckw2/1026/t1 | deliveries |   165
+ ckw2/1026/t1 | executions |   165
+ ckw2/1026/t2 | deliveries |   175
+ ckw2/1026/t2 | executions |   175
+ ckw2/1026/t3 | deliveries |   169
+ ckw2/1026/t3 | executions |   169
+ ckw2/1026/t4 | deliveries |   170
+ ckw2/1026/t4 | duplicates |     1
+ ckw2/1026/t4 | executions |   168
+ ckw2/1026/t4 |   requeues |     1
+ ckw2/1026/t5 | deliveries |   164
+ ckw2/1026/t5 | executions |   164
+ ckw2/1026/t6 | deliveries |   168
+ ckw2/1026/t6 | executions |   168
+ ckw2/1026/t7 | deliveries |   175
+ ckw2/1026/t7 | executions |   175
+
+(34 rows)

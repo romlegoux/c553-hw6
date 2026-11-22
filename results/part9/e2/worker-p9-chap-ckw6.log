@@ -1,0 +1,27 @@
+# 2026-11-20 16:07:36,328 cassandra.cluster WARNING Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['10.211.245.23'], lbp = None)
+# 2026-11-20 16:07:36,346 cassandra.cluster WARNING Downgrading core protocol version from 66 to 65 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+# 2026-11-20 16:07:36,348 cassandra.cluster WARNING Downgrading core protocol version from 65 to 5 for 10.211.245.23:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. https://docs.datastax.com/en/developer/python-driver/latest/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+# vm=ckw6 node=hw6---rlegoux utc=2026-11-20T16:07:36Z commit=efed0c9
+# worker qname=p9-chap threads=8 prefetch=1 idle=0 durable=True x=1
+id,start,end,status,redelivered,outcome
+merge-7127-75947,1795190963.537404,1795190964.280488,0,0,done
+merge-237-134500,1795190963.537028,1795190964.344082,0,0,done
+merge-672-122797,1795190963.537840,1795190964.661440,0,0,done
+merge-2830-3980,1795190963.600891,1795190964.980507,0,0,done
+merge-1188-133604,1795190965.793390,1795190966.125306,0,0,done
+merge-4446-2275,1795190973.889146,1795190974.098814,0,0,done
+4992-41806,1795190981.581701,1795191135.911380,0,0,done
+5105-28241,1795190981.577537,1795191152.242677,0,0,done
+4992-41797,1795190981.587513,1795191159.851916,0,0,done
+1089-134691,1795190981.469465,1795191187.593293,0,0,done
+5142-36377,1795190981.566414,1795191203.000392,0,0,done
+merge-8224-274384,1795191220.792782,1795191220.931779,0,0,done
+merge-6829-68771,1795191246.851124,1795191247.139475,0,0,done
+1089-134686,1795190981.489309,1795191262.985512,0,0,done
+61-70970,1795190981.580551,1795191267.560176,0,0,done
+8555-284449,1795191135.952110,1795191284.418263,0,0,done
+908-31957,1795191159.886446,1795191319.518642,0,0,done
+merge-1188-133604,1795191321.356691,1795191321.648257,0,0,done
+6829-68769,1795190981.590885,1795191326.789896,0,0,done
+908-157963,1795191152.303889,1795191347.597887,0,0,done
+merge-7176-92135,1795191391.516850,1795191391.776375,0,0,done
