@@ -1,0 +1,101 @@
+commit b993916b2391911f5ba74fc4afedd0b55e3caa26
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Mon Nov 23 19:46:49 2026 +0000
+
+    Part 9 analysis, examples, readme
+
+commit 399844faf2b2d537b9e4a39042f0385e405c1839
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Sun Nov 22 23:26:00 2026 +0000
+
+    Part 9 +fix
+
+commit efed0c9447b8e2d485ad497068c03e39de05a83b
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Fri Nov 20 00:48:43 2026 +0000
+
+    C2/C3 sysinfo
+
+commit 1d62e4ebca027e7dd8648ceae690c125442a9503
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Thu Nov 19 16:45:09 2026 +0000
+
+    tables and plots +  headers on line 1
+
+commit 869d99f778770328f414844671adb97e9ac1ec5e
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Wed Nov 18 22:32:37 2026 +0000
+
+    Evidence C
+
+commit 33ab1089a30545dc2d82393449687e29fbb449c0
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Wed Nov 18 22:03:01 2026 +0000
+
+    Q6: fast mode + results
+
+commit 35e3e9415ac27d579240bde6c072fb700062d300
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Tue Nov 17 16:38:41 2026 +0000
+
+    Part 7: results (7a-7e)
+
+commit 4a88ac81dd0ee58fa6c7e7560cc7aaf7e5b46af7
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Sat Nov 14 21:05:24 2026 +0000
+
+    Part 6 idle workers, ck-worker image, provisioner, schedule client
+
+commit 143ea9783bac32aee4dafcdbd5b669bd4fb2a9ac
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Sat Nov 14 20:20:11 2026 +0000
+
+     results of Parts 2-5 tests
+
+commit f81656cf6e9a968308f57a4739a6da18018072ce
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Sat Nov 14 16:53:19 2026 +0000
+
+    debug healthcheck.py
+
+commit acba5ca79f27143264e25725464503b3f3f10d52
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Sat Nov 14 16:49:39 2026 +0000
+
+    Part 5: counters vs worker logs check, Parts 4-5 validated
+
+commit c3ac6170ef1df6d133d27f53e4f456f2d5a3d4fa
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Sat Nov 14 01:56:25 2026 +0000
+
+    Part 4-5: worker + start/stop and venv scripts
+
+commit 1eb870f84da10be923f5c0961f21c3521d16866e
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Fri Nov 13 20:49:53 2026 +0000
+
+    Part 2: remote client
+
+commit 8835e2d29b6b3f259bf60863c37f8a9138bde198
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Fri Nov 13 17:22:37 2026 +0000
+
+    Part 3: local client + testbed scripts (lxd, vms, sync, bootstrap)
+
+commit a3ec14cb702b847b4084b409af04c89da2eb9060
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Fri Nov 13 16:45:08 2026 +0000
+
+    common.py + pytest tests
+
+commit 6c1e8337044e54f52e4cbcbb58d73dcb27ff1cf5
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Fri Nov 13 00:13:12 2026 +0000
+
+    Part 1: SSH setup, healthcheck, .gitignore
+
+commit 4b3a35088120348c27f7035b59d4aea551985b3d
+Author: Romain Legoux <rom.legoux625@gmail.com>
+Date:   Thu Nov 12 18:05:15 2026 +0000
+
+    first commit
