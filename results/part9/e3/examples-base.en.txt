@@ -1,0 +1,16 @@
+# vm=tiny node=hw6---rlegoux utc=2026-11-22T23:47:45Z commit=399844f
+1995-1836 (1995-1836-0012)
+  ref: but we're not er exactly welcomed
+  hyp: but we're not exactly welcome
+4992-41797 (4992-41797-0003)
+  ref: mister popham laid down his brush
+  hyp: mr popham laid down his brush
+121-123859 (121-123859-0004)
+  ref: so i return rebuk'd to my content and gain by ill thrice more than i have spent
+  hyp: so i return rebuked to my content and gain by ill thrice more than i have spent
+8463-294825 (8463-294825-0017)
+  ref: liter roughly one quart
+  hyp: leader roughly one court
+8555-284447 (8555-284447-0016)
+  ref: fine glorious
+  hyp: fine chlorious

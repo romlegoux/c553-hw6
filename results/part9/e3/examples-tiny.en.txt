@@ -1,0 +1,16 @@
+# vm=tiny node=hw6---rlegoux utc=2026-11-22T23:58:08Z commit=399844f
+4992-41797 (4992-41797-0003)
+  ref: mister popham laid down his brush
+  hyp: mr popom lay down his brush
+4992-41806 (4992-41806-0004)
+  ref: burn fire burn flicker flicker flame
+  hyp: burn fire burn slicker flicker flame
+61-70970 (61-70970-0005)
+  ref: the lad had checked him then
+  hyp: the latter checked him then
+8555-284449 (8555-284449-0014)
+  ref: the former boolooroo groaned
+  hyp: the former bill of regrowned
+8463-294825 (8463-294825-0011)
+  ref: he's swiftly punished
+  hyp: he is swiftly punished

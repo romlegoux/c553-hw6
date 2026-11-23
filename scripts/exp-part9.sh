@@ -1,12 +1,4 @@
 #!/usr/bin/env bash
-# Part 9 (9d, 9e) on the node, in tmux: scripts/exp-part9.sh STEP [T X]
-#   smoke        2 chapters on 1 VM (2x4): checks the whole chain             (~3 min)
-#   e2           utterance tasks, 8 VMs, shapes -t x -x = 1x8 2x4 4x2 8x1      (~40 min)
-#   chapter T X  chapter tasks, 8 VMs, best shape                              (~10 min)
-#   e1 T X       utterance tasks on 1, 2 and 4 VMs, best shape (8 VMs = e2)    (~1.5 h)
-#   e3 T X       tiny.en on 8 VMs, best shape (base.en = e2)                   (~5 min)
-#   kill T X     9d: kill -9 the worker on ckw8 60 s in, 8 VMs                 (~10 min)
-# One run each (about 10 min or more). Results: results/part9/<step>/
 set -u
 source "$(dirname "${BASH_SOURCE[0]}")/exp-lib.sh"
 JOBS=workloads/jobs-test-clean.txt
@@ -47,6 +39,13 @@ case $step in
   kill)
     session "p9-kill" 8 "$T" "$X" "$DIR0/kill"
     KILL_AFTER=60 one_run "9d-kill-${T}x${X}" -j "$JOBS" -g utt -m base.en
+    session_end ;;
+  examples)
+    shift
+    { hdr tiny; on_tiny "venv/bin/python3 src/examples.py $*"; } | tee "$DIR0/e3/examples-$1.txt" ;;
+  e3again)
+    session "p9-tiny2" 8 "$T" "$X" "$DIR0/e3-again"
+    one_run "e3-tiny-${T}x${X}" -j "$JOBS" -g utt -m tiny.en
     session_end ;;
   *) echo "unknown step: $step"; exit 1 ;;
 esac
